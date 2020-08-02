@@ -4,7 +4,7 @@ Learning how to build applications with Svelte and wanted to share this template
 
 Modern build process with Svelte, WebPack, PurgeCSS, code splitting, lazy loading...etc
 
-![Cypress Integration Tests](https://github.com/NazimAli2017/svelte-template/workflows/Cypress%20Integration%20Tests/badge.svg?branch=master)
+![Cypress Tests](https://github.com/NazimAli2017/svelte-template/workflows/Cypress%20Tests/badge.svg)
 ![Yarn Build](https://github.com/NazimAli2017/svelte-template/workflows/Yarn%20Build/badge.svg?branch=master)
 
 ![Screenshot](screenshot.png)
