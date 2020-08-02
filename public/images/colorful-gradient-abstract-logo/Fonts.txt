@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Exo
+Author: Natanael Gama
+Url: http://www.fontsquirrel.com/fonts/exo
+
+Font: Poppins
+Author: Indian Type Foundry
+Url: https://www.fontsquirrel.com/fonts/poppins
