@@ -9,14 +9,14 @@ jobs:
       - uses: cypress-io/github-action@v2
 
       - uses: actions/upload-artifact@v1
-        if: failure()
+        # if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
           spec: cypress/integration/homepage/performance.spec.js
-
-      - uses: actions/upload-artifact@v1
-        if: always()
-        with:
-          name: cypress-videos
-          path: cypress/videos
+      # Video example
+      # - uses: actions/upload-artifact@v1
+      #   if: always()
+      #   with:
+      #     name: cypress-videos
+      #     path: cypress/videos
