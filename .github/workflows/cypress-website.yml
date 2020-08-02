@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Website Performance
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout, install packages, cache
         uses: actions/checkout@v1
-      - name: Run one example test
+      - name: Homepage performance test
         uses: cypress-io/github-action@v2
         with:
-          spec: cypress/integration/examples/actions.spec.js
+          spec: cypress/integration/homepage/performance.spec.js
