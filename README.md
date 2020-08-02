@@ -15,6 +15,7 @@ Modern build process with Svelte, WebPack, PurgeCSS, code splitting, lazy loadin
 ```
 yarn install
 yarn dev
+yarn test
 ```
 
 ## Deploying
