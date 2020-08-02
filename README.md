@@ -17,6 +17,12 @@ yarn install
 yarn dev
 ```
 
+## Deploying
+Production build assets are stored in `public/dist`  
+Static assets can be deployed to any server that supports it. Should be just as easy to deploy to other static host providers like AWS, Netlify, or Firebase.
+
+Google App Engine example configuration stored in `app.yaml` and deployed to the demo URL.
+
 ## Goals
 1. Use web dev best practices
 2. Improve TypeScript
