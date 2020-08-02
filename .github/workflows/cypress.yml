@@ -1,4 +1,4 @@
-name: Cypress Integration Tests
+name: Cypress Tests
 
 on:
   push:
@@ -10,9 +10,9 @@ jobs:
   cypress-run:
     runs-on: ubuntu-16.04
     steps:
-      - name: Checkout
+      - name: Checkout, install packages, cache
         uses: actions/checkout@v1
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
+      - name: Run one example test
         uses: cypress-io/github-action@v2
+        with:
+          spec: cypress/integration/examples/actions.spec.js
