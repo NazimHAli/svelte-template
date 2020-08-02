@@ -33,6 +33,7 @@ Google App Engine example configuration stored in `app.yaml` and deployed to the
 ## Features
 - Svelte with TypeScript
 - WebPack
+- TailwindCSS
 - PostCSS: Autoprefixer, PurgeCSS
 - Code splitting
 - Lazy loading
