@@ -56,7 +56,7 @@ Google App Engine example configuration stored in `app.yaml` and deployed to the
 
 ## TODO
 
-- [ ] Cleanup unused packages
+- [x] Cleanup unused packages
 - [ ] Add unit tests
 - [ ] Add integration tests
 - [ ] Add visual regression tests
@@ -68,6 +68,6 @@ Google App Engine example configuration stored in `app.yaml` and deployed to the
 - [ ] Create virtual scroller
 - [ ] Migrate Javascript modules to TypeScript
 
-## Contributions welcome
+## Contributions welcome!
 
-Would be great if anyone wanted to help with the items in TODO!
+Can start with the list of items in the TODO section.
