@@ -11,7 +11,7 @@ jobs:
         with:
           spec: cypress/integration/homepage/performance.spec.js
 
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2.1.2
         with:
           name: cypress-screenshots
           path: cypress/screenshots
