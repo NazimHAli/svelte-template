@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  cypress-run:
+  cypress-website:
     runs-on: ubuntu-latest
     name: Cypress Website Performance
     steps:
