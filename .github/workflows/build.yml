@@ -17,9 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Yarn install and build
-        uses: actions/setup-node@v1
-        with:
-          node-version: "12.x"
+      - uses: actions/setup-node@v1
       - run: yarn install
       - run: yarn build
     # Yarn cache example, need to get it running

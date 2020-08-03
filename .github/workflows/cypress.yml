@@ -10,11 +10,26 @@ jobs:
   cypress:
     runs-on: ubuntu-latest
     name: Cypress Tests
+    # steps:
+    #   - name: Checkout, install packages, cache
+    #     uses: actions/checkout@v1
+    #   - name: Run tests
+    #     uses: cypress-io/github-action@v2
+
+    #     with:
+    #       build: yarn build
+    #       start: yarn start
+    #       wait-on: "http://localhost:8080"
+    #       test: yarn test:sections
+
     steps:
-      - name: Checkout, install packages, cache
-        uses: actions/checkout@v1
-      - name: Run tests
+      - name: Checkout
+      - uses: actions/checkout@v1
+      - name: Cypress run
         uses: cypress-io/github-action@v2
-      - run: yarn build
-      - run: yarn test:start
-      - run: yarn test:sections
+        with:
+          build: yarn build
+          start: yarn test:start
+          wait-on: "http://localhost:8080"
+          wait-on-timeout: 30
+          spec: "cypress/integration/sections/**"
