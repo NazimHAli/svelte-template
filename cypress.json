@@ -1,6 +1,6 @@
 {
   "animationDistanceThreshold": 5,
-  "baseUrl": "https://source-285017.uc.r.appspot.com/",
+  "baseUrl": null,
   "blacklistHosts": null,
   "chromeWebSecurity": true,
   "componentFolder": "cypress/component",

@@ -1,5 +1,8 @@
-/* global assert */
-describe("Check some performance metrics", () => {
+/// <reference types="cypress" />
+
+describe("Check some performance metrics", {
+  baseUrl: "https://source-285017.uc.r.appspot.com/"
+}, () => {
   it("check page load time", () => {
     cy.visit("/", {
       onBeforeLoad: (win) => {
