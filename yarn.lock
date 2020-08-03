@@ -2188,9 +2188,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.488:
-  version "1.3.515"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.515.tgz#96683d2c2be9bf83f6cca75d504a7b443d763c08"
-  integrity sha512-C9h2yLQwNSK/GTtWQsA9O6mLKv0ubmiAQgmz1HvHnAIH8g5Sje1shWxcooumbGiwgqvZ9yrTYULe4seMTgMYqQ==
+  version "1.3.516"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.516.tgz#03ec071b061e462b786bf7e7ce226fd7ab7cf1f6"
+  integrity sha512-WDM5AAQdOrvLqSX8g3Zd5AujBXfMxf96oeZkff0U2HF5op3tjShE+on2yay3r1UD4M9I3p0iHpAS4+yV8U8A9A==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -6196,9 +6196,9 @@ svelte-dev-helper@^1.1.9:
   integrity sha1-fRh9tcbNu9ZNdaMvkbiZi94yc8M=
 
 svelte-language-server@*:
-  version "0.10.81"
-  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.81.tgz#857d43ad63c56fc146f4de3054f66096b4d1f923"
-  integrity sha512-a5FPpp3Ya0FgxW4LktsPi0Tp19SSQNsh7gbgTQHjgblX1OMJWIJDFqTPGXVU7JdHeyC78eYgbtefY3mdxKcjuQ==
+  version "0.10.83"
+  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.83.tgz#5c67720bce2983c31e0e76a43ac0634e197fc908"
+  integrity sha512-GWamPvSGNwYWmtjugWV/tniAX1wAq1Cx7LXCwFqbhUBseBF0NWU8gyoT7h5Bci42NlG6XDOQqK3WA+WvlkZs5Q==
   dependencies:
     cosmiconfig "^6.0.0"
     estree-walker "^2.0.1"
@@ -6247,9 +6247,9 @@ svelte-preprocess@~3.9.11:
     strip-indent "^3.0.0"
 
 svelte2tsx@*:
-  version "0.1.68"
-  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.68.tgz#5df6529240dd96c88fa00cf80ff32a917220332c"
-  integrity sha512-PUvq270qLGHfuoidrKTBpJ8jYoG3ayKktR0AUozd3Bctw79MKDWxZSnc/jHXTfIREPHnGKMVDtDqx7Hcn4h3oA==
+  version "0.1.70"
+  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.70.tgz#a5dd25ee6b8259151cab761b75977b2ac3bd9fc2"
+  integrity sha512-uu1X5fgdEpMP8Knf7saiM/O7z20fQRZG9YI8kMQGUKXxgnPa8oI5zN2PMOmEms7JbMerjs7H/JH/5cpGmRUM2g==
   dependencies:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
