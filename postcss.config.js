@@ -10,7 +10,6 @@ module.exports = {
   plugins: [
     tailwindcss,
     autoprefixer({
-      add: true,
       grid: false, // Disable IE CSS Grid fallbacks
     }),
     postcssImport,
