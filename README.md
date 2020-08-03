@@ -6,6 +6,8 @@ Modern build process with Svelte, WebPack, PurgeCSS, code splitting, lazy loadin
 
 ![Cypress Tests](https://github.com/NazimAli2017/svelte-template/workflows/Cypress%20Tests/badge.svg)
 ![Yarn Build](https://github.com/NazimAli2017/svelte-template/workflows/Yarn%20Build/badge.svg?branch=master)
+![Website Performance](https://github.com/NazimAli2017/svelte-template/workflows/Website%20Performance/badge.svg)
+![Artifacts](https://github.com/NazimAli2017/svelte-template/workflows/Artifacts/badge.svg)
 
 ![Screenshot](screenshot.png)
 
