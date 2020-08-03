@@ -12,7 +12,7 @@ jobs:
     name: Cypress Website Performance
     steps:
       - name: Checkout, install packages, cache
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2.3.1
       - name: Homepage performance test
         uses: cypress-io/github-action@v2
         with:
