@@ -9,6 +9,7 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    name: Cypress Website Performance
     steps:
       - name: Checkout, install packages, cache
         uses: actions/checkout@v1
