@@ -28,7 +28,6 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          group: Tests on Node.js v${{ matrix.node-version }}
           build: yarn build
           start: yarn test:start
           wait-on: "http://localhost:8080"
