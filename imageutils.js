@@ -3,7 +3,6 @@ const path = require("path");
 const glob = require("glob");
 const fs = require("fs");
 
-const publicFolder = path.resolve(__dirname, "public");
 const publicFolderDist = path.resolve(__dirname, "public/dist");
 const publicFolderDistImages = path.resolve(__dirname, "public/dist/images");
 const srcImages = path.resolve(__dirname, "public/images/**/*.jpg");
