@@ -55,7 +55,7 @@ const optimizeImages = (imagesGlob) => {
       const relativeFilePath = path
         .relative(__dirname, file)
         .replace("public/images", "");
-      const newFile = `${publicFolderDistImages}${relativeFilePath}`;
+      const newFile = path.join(path.relative(__dirname, "public/dist/images"), relativeFilePath);
       const newFileDir = path.dirname(newFile);
 
       createFoldersRecursively(newFileDir);
