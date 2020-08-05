@@ -4,9 +4,9 @@ const glob = require("glob");
 const fs = require("fs");
 
 const publicFolder = path.resolve(__dirname, "public");
-const publicFolderDist = `${publicFolder}/dist`;
-const publicFolderDistImages = `${publicFolderDist}/images`;
-const srcImages = `${publicFolder}/images/**/*.jpg`;
+const publicFolderDist = path.resolve(__dirname, "public/dist");
+const publicFolderDistImages = path.resolve(__dirname, "public/dist/images");
+const srcImages = path.resolve(__dirname, "public/images/**/*.jpg");
 
 /*
  * Create folder(s) if doesn't exist
