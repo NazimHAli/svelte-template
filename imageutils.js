@@ -3,10 +3,9 @@ const path = require("path");
 const glob = require("glob");
 const fs = require("fs");
 
-const publicFolder = path.resolve(__dirname, "public");
-const publicFolderDist = `${publicFolder}/dist`;
-const publicFolderDistImages = `${publicFolderDist}/images`;
-const srcImages = `${publicFolder}/images/**/*.jpg`;
+const publicFolderDist = path.resolve(__dirname, "public/dist");
+const publicFolderDistImages = path.resolve(__dirname, "public/dist/images");
+const srcImages = path.resolve(__dirname, "public/images/**/*.jpg");
 
 /*
  * Create folder(s) if doesn't exist
@@ -56,7 +55,7 @@ const optimizeImages = (imagesGlob) => {
       const relativeFilePath = path
         .relative(__dirname, file)
         .replace("public/images", "");
-      const newFile = `${publicFolderDistImages}/${relativeFilePath}`;
+      const newFile = path.join(path.relative(__dirname, "public/dist/images"), relativeFilePath);
       const newFileDir = path.dirname(newFile);
 
       createFoldersRecursively(newFileDir);

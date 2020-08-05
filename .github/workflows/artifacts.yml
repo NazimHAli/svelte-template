@@ -1,6 +1,7 @@
 name: Artifacts
 
 on: [push]
+
 jobs:
   artifacts:
     runs-on: ubuntu-latest
