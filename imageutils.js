@@ -63,7 +63,7 @@ const optimizeImages = (imagesGlob) => {
         .toFormat("webp")
         .toFile(newFile)
         .catch((err) => {
-          console.exception(`Sharp failed with the error: ${err}`)
+          console.error(`Sharp failed with the error: ${err}`)
         });
     });
   });
