@@ -10,17 +10,13 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x]
-
-    name: Cypress on Node.js v${{ matrix.node-version }}
+    name: Cypress on Node.js v12
 
     steps:
       - name: Checkout
         uses: actions/setup-node@v2.1.1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12
 
       - name: Checkout
         uses: actions/checkout@v2.3.1
