@@ -3,9 +3,9 @@ const path = require("path");
 const glob = require("glob");
 const fs = require("fs");
 
-const publicFolderDist = path.resolve(__dirname, "public/dist");
-const publicFolderDistImages = path.resolve(__dirname, "public/dist/images");
-const srcImages = path.resolve(__dirname, "public/images/**/*.jpg");
+const publicFolderDist = path.resolve(__dirname, "dist");
+const publicFolderDistImages = path.resolve(__dirname, "dist/images");
+const srcImages = path.resolve(__dirname, "src/images/**/*.jpg");
 
 /*
  * Create folder(s) if doesn't exist
@@ -52,10 +52,8 @@ const optimizeImages = (imagesGlob) => {
     }
 
     files.forEach((file) => {
-      const relativeFilePath = path
-        .relative(__dirname, file)
-        .replace("public/images", "");
-      const newFile = path.join(path.relative(__dirname, "public/dist/images"), relativeFilePath);
+      const relativeFilePath = path.relative(__dirname, file).replace("src/", "")
+      const newFile = path.join(path.resolve("dist"), relativeFilePath);
       const newFileDir = path.dirname(newFile);
 
       createFoldersRecursively(newFileDir);
@@ -64,7 +62,9 @@ const optimizeImages = (imagesGlob) => {
         .resize(300, 200)
         .toFormat("webp")
         .toFile(newFile)
-        .catch((err) => console.log(`Sharp failed with the error: ${err}`));
+        .catch((err) => {
+          console.exception(`Sharp failed with the error: ${err}`)
+        });
     });
   });
 };

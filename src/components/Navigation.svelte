@@ -71,7 +71,7 @@
   <div class="flex-1 flex justify-between items-center">
     <a href="#12">
       <img
-        src="images/colorful-gradient-abstract-logo/3410492.jpg"
+        src="./images/colorful-gradient-abstract-logo/3410492.jpg"
         alt="Site icon"
         width="30px" />
     </a>

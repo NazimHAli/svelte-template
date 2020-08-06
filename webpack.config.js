@@ -6,7 +6,7 @@ const WebpackShellPlugin = require("webpack-shell-plugin");
 
 const nodeEnvironment = process.env.NODE_ENV || "development";
 const isProd = nodeEnvironment === "production";
-const distFolder = path.resolve(__dirname, "public/dist");
+const distFolder = path.resolve(__dirname, "dist");
 
 module.exports = {
   mode: nodeEnvironment,
@@ -70,6 +70,8 @@ module.exports = {
       {
         // Images
         test: /\.(gif|png|jpe?g)$/,
+        exclude: /node_modules/,
+        include: /src/,
         use: {
           loader: "file-loader",
         },
