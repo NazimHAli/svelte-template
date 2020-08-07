@@ -1,11 +1,12 @@
 <script>
   let currentActiveItem = "Home";
+
   const navItems = [
-    { name: "Home", link: "#1" },
-    { name: "About", link: "#2" },
-    { name: "Products", link: "#3" },
-    { name: "Contact", link: "#4" },
-    { name: "Meow", link: "#5" },
+    { name: "Home", link: "/#/" },
+    { name: "About", link: "/#/about" },
+    { name: "Products", link: "/#/products" },
+    { name: "Contact", link: "/#/contact" },
+    { name: "Meow", link: "/#/meow" },
   ];
 </script>
 
@@ -69,7 +70,7 @@
   class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2
   animated fadeIn shadow-md">
   <div class="flex-1 flex justify-between items-center">
-    <a href="#12">
+    <a href={navItems[0].link}>
       <img
         src="./images/colorful-gradient-abstract-logo/3410492.jpg"
         alt="Site icon"
@@ -78,9 +79,7 @@
   </div>
 
   <label for="menu-toggle" class="pointer-cursor lg:hidden block">
-    <a href="#12">
-      <p>Menu</p>
-    </a>
+    <button>Menu</button>
   </label>
 
   <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">

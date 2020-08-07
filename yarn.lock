@@ -285,10 +285,10 @@
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.2.0.tgz#b597c83502e3c3c6641a8aaabda223cd494ab349"
   integrity sha512-aPgMH+CjQiScLZculoDNOQUrrK2ktkbl3D6uCLYp1jgYRlNDrMONu9nMu8LfwAeetYNpVNeIGx7WzHSu0kvECg==
 
-"@tsconfig/svelte@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@tsconfig/svelte/-/svelte-1.0.4.tgz#ebcd001b96a64afad12d6cc6bac6ec7f916975cb"
-  integrity sha512-sSUYEUu+6tjPVryPl68YzPKs//HtnTqU3jX9KEGsL80MKfn/zyFfnGY8YxHrb6rOiBJHkQAnISMmH3/gNKcJxQ==
+"@tsconfig/svelte@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@tsconfig/svelte/-/svelte-1.0.7.tgz#d233b18302e23bc7e5586c49f9aa105d107986ba"
+  integrity sha512-UjkHa0A1lYBE3b8zSsef2rzbw0ufypHUr/mq+oOFepez1djR43zffcnTzuGLxzJx7oaFOAtv0qpnGsC46XIILA==
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -1275,9 +1275,9 @@ check-more-types@^2.24.0:
   integrity sha1-FCD/sQ/URNz8ebQ4kbv//TKoRgA=
 
 "chokidar@>=2.0.0 <4.0.0", chokidar@^3.4.1:
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.1.tgz#e905bdecf10eaa0a0b1db0c664481cc4cbc22ba1"
-  integrity sha512-TQTJyr2stihpC4Sya9hs2Xh+O2wf+igjL36Y75xx2WdHuiICcn/XJza46Jwt0eT5hVpQOzo3FpY3cj3RVYLX0g==
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.4.2.tgz#38dc8e658dec3809741eb3ef7bb0a47fe424232d"
+  integrity sha512-IZHaDeBeI+sZJRX7lGcXsdzgvZqKv6sECqsbErJA4mHWfpRrD8B97kSFN4cQz6nGBGiuFia1MKR4d6c1o8Cv7A==
   dependencies:
     anymatch "~3.1.1"
     braces "~3.0.2"
@@ -2242,9 +2242,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.488:
-  version "1.3.522"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.522.tgz#4a6485ad187ffd31913bba0747d0e36405f405d6"
-  integrity sha512-67V62Z4CFOiAtox+o+tosGfVk0QX4DJgH609tjT8QymbJZVAI/jWnAthnr8c5hnRNziIRwkc9EMQYejiVz3/9Q==
+  version "1.3.523"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.523.tgz#494080b318ba929614eebd04405b94c359ea9333"
+  integrity sha512-D4/3l5DpciddD92IDRtpLearQSGzly8FwBJv+nITvLH8YJrFabpDFe4yuiOJh2MS4/EsXqyQTXyw1toeYPtshQ==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
