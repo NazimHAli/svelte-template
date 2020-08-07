@@ -285,10 +285,10 @@
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.2.0.tgz#b597c83502e3c3c6641a8aaabda223cd494ab349"
   integrity sha512-aPgMH+CjQiScLZculoDNOQUrrK2ktkbl3D6uCLYp1jgYRlNDrMONu9nMu8LfwAeetYNpVNeIGx7WzHSu0kvECg==
 
-"@tsconfig/svelte@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@tsconfig/svelte/-/svelte-1.0.7.tgz#d233b18302e23bc7e5586c49f9aa105d107986ba"
-  integrity sha512-UjkHa0A1lYBE3b8zSsef2rzbw0ufypHUr/mq+oOFepez1djR43zffcnTzuGLxzJx7oaFOAtv0qpnGsC46XIILA==
+"@tsconfig/svelte@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@tsconfig/svelte/-/svelte-1.0.8.tgz#3669305544f8ccbc945dc6906e5be2e0770e7389"
+  integrity sha512-o6vRhB2axVYXuur37VhHeOj7KYrQD5/y51Brsgfy/ymMTP0kGIvnOLcN9IR6NuzkdKJvnNhGYMGJPOh/MHYuZQ==
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -1072,14 +1072,14 @@ browserify-zlib@^0.2.0:
     pako "~1.0.5"
 
 browserslist@^4.0.0, browserslist@^4.12.0:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.13.0.tgz#42556cba011e1b0a2775b611cba6a8eca18e940d"
-  integrity sha512-MINatJ5ZNrLnQ6blGvePd/QOz9Xtu+Ne+x29iQSCHfkU5BugKVJwZKn/iiL8UbpIpa3JhviKjz+XxMo0m2caFQ==
+  version "4.14.0"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.14.0.tgz#2908951abfe4ec98737b72f34c3bcedc8d43b000"
+  integrity sha512-pUsXKAF2lVwhmtpeA3LJrZ76jXuusrNyhduuQs7CDFf9foT4Y38aQOserd2lMe5DSSrjf3fx34oHwryuvxAUgQ==
   dependencies:
-    caniuse-lite "^1.0.30001093"
-    electron-to-chromium "^1.3.488"
-    escalade "^3.0.1"
-    node-releases "^1.1.58"
+    caniuse-lite "^1.0.30001111"
+    electron-to-chromium "^1.3.523"
+    escalade "^3.0.2"
+    node-releases "^1.1.60"
 
 buffer-crc32@~0.2.3:
   version "0.2.13"
@@ -1231,10 +1231,10 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001093, caniuse-lite@^1.0.30001109:
-  version "1.0.30001111"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001111.tgz#dd0ce822c70eb6c7c068e4a55c22e19ec1501298"
-  integrity sha512-xnDje2wchd/8mlJu8sXvWxOGvMgv+uT3iZ3bkIAynKOzToCssWCmkz/ZIkQBs/2pUB4uwnJKVORWQ31UkbVjOg==
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001111:
+  version "1.0.30001112"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001112.tgz#0fffc3b934ff56ff0548c37bc9dad7d882bcf672"
+  integrity sha512-J05RTQlqsatidif/38aN3PGULCLrg8OYQOlJUKbeYVzC2mGZkZLIztwRlB3MtrfLmawUmjFlNJvy/uhwniIe1Q==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -2241,10 +2241,10 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.488:
-  version "1.3.523"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.523.tgz#494080b318ba929614eebd04405b94c359ea9333"
-  integrity sha512-D4/3l5DpciddD92IDRtpLearQSGzly8FwBJv+nITvLH8YJrFabpDFe4yuiOJh2MS4/EsXqyQTXyw1toeYPtshQ==
+electron-to-chromium@^1.3.523:
+  version "1.3.524"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.524.tgz#dd49646594466192de35956a5369bb20d616aa78"
+  integrity sha512-ZUvklIBkfXQyA6IeiEss1nfKRICcdB5afAGZAaPGaExdfrkpUu/WWVO+X7QpNnphaVMllXnAcvKnVPdyM+DCPQ==
 
 elegant-spinner@^1.0.1:
   version "1.0.1"
@@ -2345,7 +2345,7 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-escalade@^3.0.1:
+escalade@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.0.2.tgz#6a580d70edb87880f22b4c91d0d56078df6962c4"
   integrity sha512-gPYAU37hYCUhW5euPeR+Y74F7BL+IBsV93j5cvGriSaD1aG6MGsqsV1yamRdrWrb2j3aiZvb0X+UBOWpx3JWtQ==
@@ -4331,7 +4331,7 @@ node-libs-browser@^2.2.1:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
-node-releases@^1.1.58:
+node-releases@^1.1.60:
   version "1.1.60"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.60.tgz#6948bdfce8286f0b5d0e5a88e8384e954dfe7084"
   integrity sha512-gsO4vjEdQaTusZAEebUWp2a5d7dF5DYoIpDG7WySnk7BuZDW+GPpHXoXXuYawRBr/9t5q54tirPz79kFIWg4dA==
@@ -6236,10 +6236,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.8.tgz#ca4931ac9bfa733b0baadda3657cd2b045592e9e"
-  integrity sha512-BrDl5e6ch88qX1GizRGr42GbXTU1j2RZadokehVXHDqdryikCEFQMQOVJ9FrU1VTQpa0ID3ZaqFmEVew8XjHtQ==
+svelte-check@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.9.tgz#ea3570c6974750fed99d3dea4329a8a0242da94a"
+  integrity sha512-KP6H7rUKYd/896iWlfWS0VBGV/MG9OVZKPY9+Zg/tw+gXnc6/zZZPpQVyFL8S4TpEDDcMohdj4w2E/Z1cfNKeA==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -6257,9 +6257,9 @@ svelte-dev-helper@^1.1.9:
   integrity sha1-fRh9tcbNu9ZNdaMvkbiZi94yc8M=
 
 svelte-language-server@*:
-  version "0.10.87"
-  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.87.tgz#94f85e44f9c0abb5b2b1eac8f5100ddbff5f76b5"
-  integrity sha512-KG+CON2EdZuQXI/82FqBJKz2hhHO05mIqVZPQhC5bcOD8tOZGikaU8c/6WguheeGVa5fSpVSKJvmtZUtKXD6Jg==
+  version "0.10.88"
+  resolved "https://registry.yarnpkg.com/svelte-language-server/-/svelte-language-server-0.10.88.tgz#4a183e8d2950f14062b782645097b7e49f1e9bcf"
+  integrity sha512-Fbsz+ydVajeV3P2gg++5bwgzgOYYi2Lat4z9QEPKgBzw835MYkBZg2lUO1oSTAVX/aUPiapVNB2zabYS/lMHGw==
   dependencies:
     cosmiconfig "^6.0.0"
     estree-walker "^2.0.1"
@@ -6308,9 +6308,9 @@ svelte-preprocess@~3.9.11:
     strip-indent "^3.0.0"
 
 svelte2tsx@*:
-  version "0.1.74"
-  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.74.tgz#e40982a380199c6ff1a0e458dd693703887ecb82"
-  integrity sha512-iOPJxLr8vjZTrJ1W0NEMGq5JOHT8uUJyCft8YWYh2J0ctcRtNdsuPgINndM/wCMNJYZFN2E83JaxvPsaRnCFqw==
+  version "0.1.75"
+  resolved "https://registry.yarnpkg.com/svelte2tsx/-/svelte2tsx-0.1.75.tgz#96da3f0409ac602a76970dc55358ace32ad07bdf"
+  integrity sha512-A9Ow5RVIlWCVruFHFmKSokRtjhdgyWQPZVoIabv229RIqViMIeSA4vcpMrpqlgbk7ZmT5U5t+vxFFb60eIA53A==
   dependencies:
     dedent-js "^1.0.1"
     pascal-case "^3.1.1"
