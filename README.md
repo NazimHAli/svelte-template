@@ -1,8 +1,9 @@
 # Svelte template
 
-Learning how to build applications with Svelte and wanted to share this template. Will use this for future personal projects, but need to do some cleanup, add tests, migrate JavaScript files to TypeScript..etc
+Starter Svelte template using a modern build process with WebPack, PurgeCSS, code splitting, lazy loading, unit testing, integration testing.
 
-Modern build process with Svelte, WebPack, PurgeCSS, code splitting, lazy loading...etc
+[![Dependecy Status](https://david-dm.org/NazimAli2017/svelte-template.svg)](https://david-dm.org/NazimAli2017/svelte-template)  
+[![devDependencies Status](https://david-dm.org/NazimAli2017/svelte-template/dev-status.svg)](https://david-dm.org/NazimAli2017/svelte-template?type=dev)
 
 ![Cypress Tests](https://github.com/NazimAli2017/svelte-template/workflows/Cypress%20Tests/badge.svg)
 ![Yarn Build](https://github.com/NazimAli2017/svelte-template/workflows/Yarn%20Build/badge.svg?branch=master)
