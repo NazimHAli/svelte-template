@@ -1,6 +1,6 @@
 # Svelte template
 
-Starter Svelte template using a modern build process with WebPack, PurgeCSS, code splitting, lazy loading, unit testing, integration testing.
+Svelte starter template/boilerplate using a modern build process with WebPack, PostCSS, PurgeCSS, code splitting, lazy loading, simple, vanilla SPA router in TypeScript, unit testing, integration testing.
 
 [![Dependecy Status](https://david-dm.org/NazimAli2017/svelte-template.svg)](https://david-dm.org/NazimAli2017/svelte-template)  
 [![devDependencies Status](https://david-dm.org/NazimAli2017/svelte-template/dev-status.svg)](https://david-dm.org/NazimAli2017/svelte-template?type=dev)
