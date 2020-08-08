@@ -15,7 +15,7 @@ describe("Check some performance metrics", {
       .its("performance")
       .then((p) => {
         p.measure("pageLoad", "start-loading", "end-loading");
-        const measure = p.getEntriesByName("pageLoad")[0];
+        const measure = p.getEntriesByName("pageLoad")[ 0 ];
 
         assert.isAtMost(measure.duration, 1000);
       });
@@ -32,7 +32,7 @@ describe("Check some performance metrics", {
 
       expect(foundImages).to.have.length(1);
 
-      return foundImages[0];
+      return foundImages[ 0 ];
     };
 
     cy.visit("/");
@@ -67,8 +67,7 @@ describe("Check some performance metrics", {
 
   it("ensure that no image failed to load", () => {
     cy.visit("/");
-    cy.get("img").each((img) => expect(img[0].naturalWidth).to.not.equal(0));
+    cy.get("img").each((img) => expect(img[ 0 ].naturalWidth).to.not.equal(0));
     cy.get(".my-4");
-    cy.screenshot({ capture: "viewport" });
   });
 });

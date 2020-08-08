@@ -1,4 +1,4 @@
-name: Cypress Tests
+name: Tests
 
 on:
   push:
@@ -10,10 +10,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
-    name: Cypress on Node.js v12
+    name: Cypress with Node.js v12
 
     steps:
-      - name: Checkout
+      - name: Setup Node.js
         uses: actions/setup-node@v2.1.1
         with:
           node-version: 12

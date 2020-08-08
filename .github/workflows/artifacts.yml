@@ -5,14 +5,13 @@ on: [push]
 jobs:
   artifacts:
     runs-on: ubuntu-latest
-    name: Artifacts
+    name: Screenshot
     steps:
       - uses: actions/checkout@v2.3.1
       - uses: cypress-io/github-action@v2
         with:
-          spec: cypress/integration/homepage/performance.spec.js
+          spec: cypress/integration/screenshot/homepage.spec.js
 
       - uses: actions/upload-artifact@v2.1.3
         with:
-          name: cypress-screenshots
           path: cypress/screenshots
