@@ -5,14 +5,12 @@ Svelte starter template/boilerplate using a modern build process with WebPack, P
 [![Dependecy Status](https://david-dm.org/NazimAli2017/svelte-template.svg)](https://david-dm.org/NazimAli2017/svelte-template)  
 [![devDependencies Status](https://david-dm.org/NazimAli2017/svelte-template/dev-status.svg)](https://david-dm.org/NazimAli2017/svelte-template?type=dev)
 
-![Cypress Tests](https://github.com/NazimAli2017/svelte-template/workflows/Cypress%20Tests/badge.svg)
-![Yarn Build](https://github.com/NazimAli2017/svelte-template/workflows/Yarn%20Build/badge.svg?branch=master)
-![Website Performance](https://github.com/NazimAli2017/svelte-template/workflows/Website%20Performance/badge.svg)
-![Artifacts](https://github.com/NazimAli2017/svelte-template/workflows/Artifacts/badge.svg)
-
-![Screenshot](screenshot.png)
+![Build](https://github.com/NazimAli2017/svelte-template/workflows/Build/badge.svg)
+![Performance](https://github.com/NazimAli2017/svelte-template/workflows/Performance/badge.svg)
+![Tests](https://github.com/NazimAli2017/svelte-template/workflows/Tests/badge.svg)
 
 [View Demo](https://source-285017.uc.r.appspot.com/)
+![Screenshot](screenshot.png)
 
 ## Quick start
 
