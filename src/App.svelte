@@ -31,23 +31,18 @@
     router
       .addRoute(/about/, () => {
         currentComponent = About;
-        console.log("about page");
       })
       .addRoute(/contact/, () => {
         currentComponent = Contact;
-        console.log("contact page");
       })
       .addRoute(/meow/, () => {
         currentComponent = Meow;
-        console.log("meow page");
       })
       .addRoute(/products/, () => {
         currentComponent = Products;
-        console.log("products page");
       })
       .addRoute("", () => {
         currentComponent = HomePage;
-        console.log("home page");
       });
   });
 </script>
