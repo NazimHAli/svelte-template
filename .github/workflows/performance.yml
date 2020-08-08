@@ -16,4 +16,4 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          spec: cypress/integration/homepage/performance.spec.js
+          spec: cypress/integration/performance/homepage.spec.js
