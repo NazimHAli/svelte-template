@@ -43,10 +43,10 @@
     "build": "cross-env NODE_ENV=production webpack",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "dev": "webpack-dev-server --content-base dist",
-    "start": "NODE_ENV=production node app.js",
+    "dev": "cross-env webpack-dev-server --content-base dist",
+    "start": "cross-env NODE_ENV=production node app.js",
     "test": "cypress run --headless -s cypress/integration/examples/actions.spec.js",
-    "test:start": "NODE_ENV=production node app.js & wait-on -t 3000 'http://localhost:8080/'",
+    "test:start": "cross-env NODE_ENV=production node app.js & wait-on -t 3000 'http://localhost:8080/'",
     "test:sections": "cypress run --headless -s cypress/integration/sections/**",
     "test:website": "cypress run --headless -s cypress/integration/homepage/performance.spec.js",
     "validate": "svelte-check"

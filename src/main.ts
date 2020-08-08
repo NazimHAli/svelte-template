@@ -1,31 +1,17 @@
-import type { SvelteComponentDev } from 'svelte/internal';
+import type { SvelteComponent } from 'svelte/internal';
 
-let app: SvelteComponentDev;
+let app: SvelteComponent;
 
-// Dynamic import example
+// Dynamically import component
 import('./App.svelte').then(module => {
   const svelteComponent = module.default;
 
   app = new svelteComponent({
     target: document.body,
     props: {
-      name: "world",
+      name: "svelte-app",
     },
   });
 });
-
-// Delayed dynamic import example
-// setTimeout(() => {
-//   import(/* webpackPreload: true */ './App.svelte').then(module => {
-//     const svelteComponent = module.default;
-
-//     app = new svelteComponent({
-//       target: document.body,
-//       props: {
-//         name: "world",
-//       },
-//     });
-//   })
-// }, 1.0 * 1000);
 
 export default app;

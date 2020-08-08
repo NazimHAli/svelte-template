@@ -1,0 +1,17 @@
+name: Performance
+
+on: [push]
+
+jobs:
+  performance:
+    runs-on: ubuntu-latest
+    name: Website Performance
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          spec: cypress/integration/performance/homepage.spec.js

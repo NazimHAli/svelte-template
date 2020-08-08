@@ -20,7 +20,7 @@ function handleIntersect(entries: any[]) {
 }
 
 // Example usage
-// import createObserver from "../utils/intersectionObserver";
+// import createObserver from "src/utils/intersectionObserver";
 // import { onMount } from "svelte";
 
 // onMount(() => {

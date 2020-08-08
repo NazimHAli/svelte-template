@@ -1,0 +1,21 @@
+name: Tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    name: Cypress Tests
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: yarn build
+          start: yarn test:start
+          wait-on: "http://localhost:8080"
+          wait-on-timeout: 30
+          spec: cypress/integration/sections/navigation.spec.js
