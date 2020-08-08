@@ -18,3 +18,4 @@ jobs:
           start: yarn test:start
           wait-on: "http://localhost:8080"
           wait-on-timeout: 30
+          spec: cypress/integration/sections/navigation.spec.js
