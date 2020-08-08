@@ -24,50 +24,27 @@ class Router {
         return this;
     };
 
-    removeRoute = (path: RegExp | string) => {
-        for (let i = 0; i < this.routes.length; i += 1) {
-            if (this.routes[i].path === path) {
-                this.routes.slice(i, 1);
-                return this;
-            }
-        }
-        return this;
-    };
-
-    clearRoutes = () => {
-        this.routes = [];
-        return this;
-    };
-
-    clearSlashes = (path: RegExp | string) => {
+    cleanPath = (path: RegExp | string) => {
         return path
             .toString()
             .replace(/\/$/, "")
             .replace(/^\//, "");
     };
 
-    getFragment = () => {
+    getCurrentRoute = () => {
         let fragment = "";
 
         if (this.mode === "history") {
-            fragment = this.clearSlashes(decodeURI(window.location.pathname + window.location.search));
+            fragment = this.cleanPath(decodeURI(window.location.pathname + window.location.search));
             fragment = fragment.replace(/\?(.*)$/, "");
             fragment = this.root !== "/" ? fragment.replace(this.root, "") : fragment;
         } else {
             const match = window.location.href.match(/#(.*)$/);
             fragment = match ? match[1] : "";
         }
-        return this.clearSlashes(fragment);
+        return this.cleanPath(fragment);
     };
 
-    navigate = (path: string = "") => {
-        if (this.mode === "history") {
-            window.history.pushState(null, null, this.root + this.clearSlashes(path));
-        } else {
-            window.location.href = `${window.location.href.replace(/#(.*)$/, "")}#${path}`;
-        }
-        return this;
-    };
 
     initializeNavigationListener = () => {
         clearInterval(this.interval);
@@ -75,8 +52,8 @@ class Router {
     };
 
     getCustomInterval = () => {
-        if (this.current === this.getFragment()) return;
-        this.current = this.getFragment();
+        if (this.current === this.getCurrentRoute()) return;
+        this.current = this.getCurrentRoute();
 
         this.routes.some(route => {
             const match = this.current.match(route.path);
