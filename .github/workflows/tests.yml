@@ -10,10 +10,10 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
 
-    name: Cypress with Node.js v12
+    name: Cypress on Node v12
 
     steps:
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v2.1.1
         with:
           node-version: 12
