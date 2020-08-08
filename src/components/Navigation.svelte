@@ -82,7 +82,7 @@
     <button>Menu</button>
   </label>
 
-  <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+  <div class="md:hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
     <nav>
       <ul
         class="lg:flex items-center justify-between text-base text-gray-800 pt-4
@@ -92,6 +92,7 @@
             <a
               class:active={currentPage === item.name}
               class="lg:p-4 py-3 px-0"
+              data-test="menu-{item.name.toLowerCase()}"
               href={item.link}
               on:click={() => (currentPage = item.name)}>
               {item.name}
