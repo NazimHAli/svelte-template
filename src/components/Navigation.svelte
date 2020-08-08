@@ -1,5 +1,5 @@
-<script>
-  let currentActiveItem = "Home";
+<script lang="ts">
+  export let currentPage: string;
 
   const navItems = [
     { name: "Home", link: "/#/" },
@@ -90,10 +90,10 @@
         {#each navItems as item}
           <li>
             <a
-              class:active={currentActiveItem === item.name}
+              class:active={currentPage === item.name}
               class="lg:p-4 py-3 px-0"
               href={item.link}
-              on:click={() => (currentActiveItem = item.name)}>
+              on:click={() => (currentPage = item.name)}>
               {item.name}
             </a>
           </li>

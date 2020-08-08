@@ -16,11 +16,12 @@
    */
   import About from "./components/routes/About.svelte";
   import Contact from "./components/routes/Contact.svelte";
-  import HomePage from "./components/routes/HomePage.svelte";
+  import Home from "./components/routes/Home.svelte";
   import Meow from "./components/routes/Meow.svelte";
   import Products from "./components/routes/Products.svelte";
 
   let currentComponent: typeof About;
+  let currentPage: string;
 
   onMount(() => {
     const router = new Router({
@@ -31,18 +32,23 @@
     router
       .addRoute(/about/, () => {
         currentComponent = About;
+        currentPage = "About";
       })
       .addRoute(/contact/, () => {
         currentComponent = Contact;
+        currentPage = "Contact";
       })
       .addRoute(/meow/, () => {
         currentComponent = Meow;
+        currentPage = "Meow";
       })
       .addRoute(/products/, () => {
         currentComponent = Products;
+        currentPage = "Products";
       })
       .addRoute("", () => {
-        currentComponent = HomePage;
+        currentComponent = Home;
+        currentPage = "Home";
       });
   });
 </script>
@@ -51,8 +57,9 @@
 
 <GlobalStyles />
 
-<Navigation />
+<Navigation {currentPage} />
 
+<!-- Dynamically select component based on currentComponent value -->
 <svelte:component this={currentComponent} />
 
 <Footer />
