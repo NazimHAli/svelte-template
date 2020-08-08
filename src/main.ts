@@ -12,7 +12,7 @@ import('./App.svelte').then(module => {
       name: "world",
     },
   });
-})
+});
 
 // Delayed dynamic import example
 // setTimeout(() => {

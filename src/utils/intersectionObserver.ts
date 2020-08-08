@@ -1,5 +1,5 @@
-function createObserver(elementToObserve) {
-  let observer;
+function createObserver(elementToObserve: Element) {
+  let observer: IntersectionObserver;
 
   let options = {
     root: null,
@@ -11,14 +11,15 @@ function createObserver(elementToObserve) {
   observer.observe(elementToObserve);
 }
 
-function handleIntersect(entries) {
-  entries.forEach((entry) => {
+function handleIntersect(entries: any[]) {
+  entries.forEach((entry: { isIntersecting: boolean; target: { classList: { remove: (arg0: string) => void; }; }; }) => {
     if (entry.isIntersecting) {
       entry.target.classList.remove("opacity-0");
     }
   });
 }
 
+// Example usage
 // import createObserver from "../utils/intersectionObserver";
 // import { onMount } from "svelte";
 

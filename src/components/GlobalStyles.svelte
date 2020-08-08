@@ -6,8 +6,6 @@
 
   body {
     @apply overflow-auto;
-    // @apply font-sans;
-    // @apply subpixel-antialiased;
   }
 
   /* Animate.css - base */
