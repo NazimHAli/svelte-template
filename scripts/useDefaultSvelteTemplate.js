@@ -46,37 +46,37 @@ const app = new App({
 export default app;`;
 
 const deleteDirectories = (path) => {
-  if (fs.existsSync(path) && fs.lstatSync(path).isDirectory()) {
-    console.log(`Deleting path recursively: ${path}`);
-    fs.readdirSync(path).forEach((file, _) => {
-      const currentPath = `${path}/${file}`;
+    if (fs.existsSync(path) && fs.lstatSync(path).isDirectory()) {
+        console.log(`Deleting path recursively: ${path}`);
+        fs.readdirSync(path).forEach((file, _) => {
+            const currentPath = `${path}/${file}`;
 
-      if (fs.lstatSync(currentPath).isDirectory()) {
-        deleteDirectories(currentPath);
-      } else {
-        fs.unlinkSync(currentPath);
-      }
-    });
+            if (fs.lstatSync(currentPath).isDirectory()) {
+                deleteDirectories(currentPath);
+            } else {
+                fs.unlinkSync(currentPath);
+            }
+        });
 
-    fs.rmdirSync(path);
-  }
+        fs.rmdirSync(path);
+    }
 };
 
 const createDirectory = (path) => {
-  console.log(`Creating empty directory: ${path}`);
-  fs.mkdir(path, (err) => {
-    if (err) {
-      console.log(`Error creating directory: ${path}`);
-    }
-  });
+    console.log(`Creating empty directory: ${path}`);
+    fs.mkdir(path, (err) => {
+        if (err) {
+            console.log(`Error creating directory: ${path}`);
+        }
+    });
 };
 
 const createFile = (fileName, fileTemplate) => {
-  console.log(`Creating new file: ${fileName}`);
+    console.log(`Creating new file: ${fileName}`);
 
-  fs.writeFile(fileName, fileTemplate, (err) => {
-    if (err) throw err;
-  });
+    fs.writeFile(fileName, fileTemplate, (err) => {
+        if (err) throw err;
+    });
 };
 
 // Delete public/ and src/ folders/files

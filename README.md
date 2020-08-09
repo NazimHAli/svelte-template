@@ -41,31 +41,31 @@ Google App Engine example configuration stored in `app.yaml` and deployed to the
 2. Improve TypeScript
 3. Keep [PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsource-285017.uc.r.appspot.com%2F) score > 90
 
-- Current score is 100, but need to make it real by adding services, logging..etc and use that score
+-   Current score is 100, but need to make it real by adding services, logging..etc and use that score
 
 ## Features
 
-- Svelte with TypeScript
-- WebPack
-- TailwindCSS
-- PostCSS: Autoprefixer, PurgeCSS
-- Code splitting
-- Lazy loading
-- GitHub actions to run build and Cypress tests
+-   Svelte with TypeScript
+-   WebPack
+-   TailwindCSS
+-   PostCSS: Autoprefixer, PurgeCSS
+-   Code splitting
+-   Lazy loading
+-   GitHub actions to run build and Cypress tests
 
 ## TODO
 
-- [x] Cleanup unused packages
-- [ ] Add unit tests
-- [ ] Add integration tests
-- [ ] Add visual regression tests
-- [ ] Add performance tests
-- [ ] Add accessibility tests
-- [ ] Add more pages
-- [ ] Add real API services
-- [ ] Update documentation
-- [ ] Create virtual scroller
-- [ ] Migrate Javascript modules to TypeScript
+-   [x] Cleanup unused packages
+-   [ ] Add unit tests
+-   [ ] Add integration tests
+-   [ ] Add visual regression tests
+-   [ ] Add performance tests
+-   [ ] Add accessibility tests
+-   [ ] Add more pages
+-   [ ] Add real API services
+-   [ ] Update documentation
+-   [ ] Create virtual scroller
+-   [ ] Migrate Javascript modules to TypeScript
 
 ## Contributions welcome!
 
