@@ -1,15 +1,3 @@
-<script lang="ts">
-  export let currentPage: string;
-
-  const navItems = [
-    { name: "Home", link: "/#/" },
-    { name: "About", link: "/#/about" },
-    { name: "Products", link: "/#/products" },
-    { name: "Contact", link: "/#/contact" },
-    { name: "Meow", link: "/#/meow" },
-  ];
-</script>
-
 <style lang="scss">
   li {
     a {
@@ -66,15 +54,29 @@
   }
 </style>
 
+<script lang="ts">
+  export let currentPage: string;
+
+  const navItems = [
+    { name: "Home", link: "/#/" },
+    { name: "About", link: "/#/about" },
+    { name: "Products", link: "/#/products" },
+    { name: "Contact", link: "/#/contact" },
+    { name: "Meow", link: "/#/meow" },
+  ];
+</script>
+
 <header
   class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2
-  animated fadeIn shadow-md">
+  animated fadeIn shadow-md"
+>
   <div class="flex-1 flex justify-between items-center">
-    <a href={navItems[0].link}>
+    <a href="{navItems[0].link}">
       <img
         src="./images/colorful-gradient-abstract-logo/3410492.jpg"
         alt="Site icon"
-        width="30px" />
+        width="30px"
+      />
     </a>
   </div>
 
@@ -86,15 +88,17 @@
     <nav>
       <ul
         class="lg:flex items-center justify-between text-base text-gray-800 pt-4
-        lg:pt-0">
+        lg:pt-0"
+      >
         {#each navItems as item}
           <li>
             <a
-              class:active={currentPage === item.name}
+              class:active="{currentPage === item.name}"
               class="lg:p-4 py-3 px-0"
               data-test="menu-{item.name.toLowerCase()}"
-              href={item.link}
-              on:click={() => (currentPage = item.name)}>
+              href="{item.link}"
+              on:click="{() => (currentPage = item.name)}"
+            >
               {item.name}
             </a>
           </li>

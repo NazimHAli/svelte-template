@@ -5,11 +5,6 @@
     "allowJs": true,
     "sourceMap": false
   },
-  "exclude": [
-    "node_modules/*",
-    "public/*"
-  ],
-  "include": [
-    "src/**/*"
-  ]
+  "exclude": ["node_modules/*", "public/*"],
+  "include": ["src/**/*"]
 }

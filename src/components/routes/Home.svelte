@@ -1,3 +1,7 @@
+<style lang="scss">
+  @import "src/styles/variables.scss";
+</style>
+
 <script lang="ts">
   export let name: string;
 
@@ -5,10 +9,6 @@
   import ContentSection from "src/components/content/ContentSection.svelte";
   import Featured from "src/components/content/Featured.svelte";
 </script>
-
-<style lang="scss">
-  @import "src/styles/variables.scss";
-</style>
 
 <p class="hidden">{name}</p>
 <Hero />
@@ -19,7 +19,8 @@
 
 <span
   class="flex px-2 h-64 w-full hline my-10 text-white text-5xl items-center
-  justify-center uppercase">
+  justify-center uppercase"
+>
   A big beautiful title right here muhahhaaha
 </span>
 
