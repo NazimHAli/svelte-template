@@ -33,13 +33,11 @@
 
 <section class="hero text-white">
   <div
-    class="container mx-auto flex flex-wrap flex-col md:flex-row items-center"
-  >
+    class="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
     <!--Left Col-->
     <div
       class="flex flex-col w-full md:w-3/5 justify-center items-start
-      text-center md:text-left animated fadeInLeft"
-    >
+      text-center md:text-left animated fadeInLeft">
       <p class="uppercase w-full">My awesome message right here ma!</p>
       <h1 class="my-4 text-5xl font-bold leading-tight text-gray-100">
         Second awesome message to everyone!!!

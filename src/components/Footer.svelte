@@ -4,8 +4,7 @@
     <div class="sm:flex sm:mt-8">
       <div
         class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row
-        justify-between"
-      >
+        justify-between">
         <div class="flex flex-col">
           <span class="font-bold text-gray-700 uppercase mb-2">
             Footer header 1

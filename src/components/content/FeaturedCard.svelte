@@ -11,8 +11,7 @@
       class="arch transition duration-500 ease-in-out transform hover:scale-110"
       width="80"
       height="80"
-      viewBox="0 0 512 512"
-    >
+      viewBox="0 0 512 512">
       <path
         d="m255.97 71.5c-14.288 35.029-22.905 57.942-38.812 91.93 9.753 10.338
         21.724 22.378 41.166
@@ -25,8 +24,7 @@
         54.144-9.896-18.218-18.728-34.64-27.163-50.281-13.286-10.297-27.144-23.7-55.411-38.208
         19.429 5.048 33.341 10.873 44.184
         17.384-85.757-159.666-92.702-180.882-122.11-249.895z"
-        fill="#1793d1"
-      ></path>
+        fill="#1793d1" />
     </svg>
   </div>
   <div class="flex-grow">
@@ -43,9 +41,8 @@
         stroke-linejoin="round"
         stroke-width="2"
         class="w-4 h-4 ml-2"
-        viewBox="0 0 24 24"
-      >
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
+        viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7" />
       </svg>
     </a>
   </div>

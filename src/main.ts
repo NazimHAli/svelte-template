@@ -1,9 +1,9 @@
-import type { SvelteComponent } from "svelte/internal";
+import type { SvelteComponent } from 'svelte/internal';
 
 let app: SvelteComponent;
 
 // Dynamically import component
-import("./App.svelte").then((module) => {
+import('./App.svelte').then(module => {
   const svelteComponent = module.default;
 
   app = new svelteComponent({

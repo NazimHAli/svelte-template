@@ -17,18 +17,17 @@
       Sub-heading 1
     </p>
     <div class="flex mt-6 justify-center">
-      <div class="w-48 h-1 rounded-full bg-blue-500 inline-flex"></div>
+      <div class="w-48 h-1 rounded-full bg-blue-500 inline-flex" />
     </div>
   </div>
   <div class="grid grid-cols-3 justify-center">
     {#each featuredCards as card}
-      <FeaturedCard card="card" />
+      <FeaturedCard {card} />
     {/each}
   </div>
   <button
     class="flex mx-auto mt-16 text-white bg-gray-900 border-0 py-2 px-8
-    focus:outline-none hover:bg-blue-900 rounded text-lg"
-  >
+    focus:outline-none hover:bg-blue-900 rounded text-lg">
     Button
   </button>
 </section>

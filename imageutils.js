@@ -52,9 +52,7 @@ const optimizeImages = (imagesGlob) => {
     }
 
     files.forEach((file) => {
-      const relativeFilePath = path
-        .relative(__dirname, file)
-        .replace("src/", "");
+      const relativeFilePath = path.relative(__dirname, file).replace("src/", "")
       const newFile = path.join(path.resolve("dist"), relativeFilePath);
       const newFileDir = path.dirname(newFile);
 
@@ -65,7 +63,7 @@ const optimizeImages = (imagesGlob) => {
         .toFormat("webp")
         .toFile(newFile)
         .catch((err) => {
-          console.error(`Sharp failed with the error: ${err}`);
+          console.error(`Sharp failed with the error: ${err}`)
         });
     });
   });

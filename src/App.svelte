@@ -57,9 +57,9 @@
 
 <GlobalStyles />
 
-<Navigation currentPage="currentPage" />
+<Navigation {currentPage} />
 
 <!-- Dynamically select component based on currentComponent value -->
-<svelte:component this="{currentComponent}" />
+<svelte:component this={currentComponent} />
 
 <Footer />

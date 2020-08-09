@@ -12,16 +12,11 @@ function createObserver(elementToObserve: Element) {
 }
 
 function handleIntersect(entries: any[]) {
-  entries.forEach(
-    (entry: {
-      isIntersecting: boolean;
-      target: { classList: { remove: (arg0: string) => void } };
-    }) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.remove("opacity-0");
-      }
+  entries.forEach((entry: { isIntersecting: boolean; target: { classList: { remove: (arg0: string) => void; }; }; }) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove("opacity-0");
     }
-  );
+  });
 }
 
 // Example usage
