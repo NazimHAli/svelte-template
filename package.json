@@ -51,7 +51,7 @@
         "lint:watch": "onchange '**' --exclude-path .gitignore -- prettier --write {{changed}}",
         "start": "cross-env NODE_ENV=production node app.js",
         "test": "cypress run",
-        "test:start": "yarn start & wait-on -t 3000 'http://localhost:8080/'",
+        "test:start": "yarn start & wait-on -t 3000 'http://localhost:8080/'"
     },
     "dependencies": {
         "compression": "^1.7.4",
