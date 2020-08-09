@@ -1,15 +1,10 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
-  "compilerOptions": {
-    "module": "esnext",
-    "allowJs": true,
-    "sourceMap": false
-  },
-  "exclude": [
-    "node_modules/*",
-    "public/*"
-  ],
-  "include": [
-    "src/**/*"
-  ]
+    "extends": "@tsconfig/svelte/tsconfig.json",
+    "compilerOptions": {
+        "module": "esnext",
+        "allowJs": true,
+        "sourceMap": false
+    },
+    "exclude": ["node_modules/*", "public/*"],
+    "include": ["src/**/*"]
 }

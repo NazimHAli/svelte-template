@@ -3,7 +3,7 @@
 const testConfig = {
     baseUrl: "http://localhost:8080",
     viewportWidth: 1024,
-    viewportHeight: 768
+    viewportHeight: 768,
 };
 
 describe("Save screenshot", testConfig, () => {
