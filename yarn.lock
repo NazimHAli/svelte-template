@@ -6269,10 +6269,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.11.tgz#fee7fe54c38f97137fa23f8f5b3d1ac3d9e337ae"
-  integrity sha512-gWC08YRZikgehTk9iG4dOQUYklIpfmyBuQkg990TMZCUeAgSVyvOz47IGGx15xM/wzCy7IbL69oNytQP/Y1fxg==
+svelte-check@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.13.tgz#19acb1e895dc43286f28575e8d2e85eb0f191885"
+  integrity sha512-5dDd1q6f3qauGinsmR9oJ7lrc2JXU+fBUdwUaaBmNw9jsDizlLw4GhMZg6+Rq1JMsx3e6gnBSMzv7/tfsrF8Zw==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
