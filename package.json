@@ -33,7 +33,7 @@
         "svelte-check": "^1.0.19",
         "svelte-loader": "2.13.6",
         "svelte-preprocess": "^4.0.12",
-        "tailwindcss": "^1.6.2",
+        "tailwindcss": "^1.7.2",
         "ts-loader": "^8.0.2",
         "typescript": "^3.9.7",
         "wait-on": "^5.2.0",
