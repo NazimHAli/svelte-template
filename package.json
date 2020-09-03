@@ -30,7 +30,7 @@
         "sharp": "^0.25.4",
         "style-loader": "^1.2.1",
         "svelte": "^3.24.1",
-        "svelte-check": "^1.0.21",
+        "svelte-check": "^1.0.34",
         "svelte-loader": "2.13.6",
         "svelte-preprocess": "^4.1.1",
         "tailwindcss": "^1.7.3",
