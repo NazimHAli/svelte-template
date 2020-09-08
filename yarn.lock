@@ -6274,10 +6274,10 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-check@^1.0.21:
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.21.tgz#fe47ee3069217bf7ca83966231d06c43a256a3cc"
-  integrity sha512-fPRBxdTCRral6FIJVcREoi+eAWOFICrDmtn5acdgE79QFzMpD5hNY0eDlCcOhONQ1XKBmH8o7gTUsA9Z/WlEBg==
+svelte-check@^1.0.38:
+  version "1.0.38"
+  resolved "https://registry.yarnpkg.com/svelte-check/-/svelte-check-1.0.38.tgz#4766772795f0247eae64b97b6d131197f1fb8577"
+  integrity sha512-dMDy0EfyQN8tijMhOpcMmueGLtHPIQ+KZpmIp69WOsKQuyX+W4nYJiTXIBZpYYV1ZkTn53hmR2HPVCKCrS6ggg==
   dependencies:
     chalk "^4.0.0"
     chokidar "^3.4.1"
@@ -6287,7 +6287,7 @@ svelte-check@^1.0.21:
     vscode-languageserver "6.1.1"
     vscode-languageserver-protocol "3.15.3"
     vscode-languageserver-types "3.15.1"
-    vscode-uri "2.1.1"
+    vscode-uri "2.1.2"
 
 svelte-dev-helper@^1.1.9:
   version "1.1.9"
@@ -6874,7 +6874,7 @@ vscode-uri@2.1.1:
   resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-2.1.1.tgz#5aa1803391b6ebdd17d047f51365cf62c38f6e90"
   integrity sha512-eY9jmGoEnVf8VE8xr5znSah7Qt1P/xsCdErz+g8HYZtJ7bZqKH5E3d+6oVNm1AC/c6IHUDokbmVXKOi4qPAC9A==
 
-vscode-uri@^2.1.1:
+vscode-uri@2.1.2, vscode-uri@^2.1.1:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-2.1.2.tgz#c8d40de93eb57af31f3c715dd650e2ca2c096f1c"
   integrity sha512-8TEXQxlldWAuIODdukIb+TR5s+9Ds40eSJrw+1iDDA9IFORPjMELarNQE3myz5XIkWWpdprmJjm1/SxMlWOC8A==
