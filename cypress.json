@@ -1,7 +1,7 @@
 {
     "animationDistanceThreshold": 5,
     "baseUrl": null,
-    "blacklistHosts": null,
+    "blockHosts": null,
     "chromeWebSecurity": true,
     "componentFolder": "cypress/component",
     "defaultCommandTimeout": 4000,
