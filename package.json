@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "license": "MIT",
     "devDependencies": {
-        "@babel/core": "^7.11.4",
+        "@babel/core": "^7.13.10",
         "@fullhuman/postcss-purgecss": "^2.3.0",
         "@tailwindcss/typography": "^0.2.0",
         "@tsconfig/svelte": "^1.0.10",
@@ -27,7 +27,7 @@
         "prettier-plugin-svelte": "^1.1.0",
         "sass": "^1.26.10",
         "sass-loader": "^9.0.3",
-        "sharp": "^0.25.4",
+        "sharp": "^0.27.2",
         "style-loader": "^1.2.1",
         "svelte": "^3.24.1",
         "svelte-check": "^1.1.26",
