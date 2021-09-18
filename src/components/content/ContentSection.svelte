@@ -10,6 +10,7 @@
             createObserver(element);
         });
     });
+
 </script>
 
 <section class="mt-10 text-gray-800 text-center">
@@ -21,5 +22,4 @@
         <InfoCard cardTitle="Card 2" cardDescription="Card description 2" />
         <InfoCard cardTitle="Card 3" cardDescription="Card description 3" />
     </div>
-
 </section>

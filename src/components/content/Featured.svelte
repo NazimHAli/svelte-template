@@ -6,6 +6,7 @@
         { title: "Title 2", description: "Description content 2" },
         { title: "Title 3", description: "Description content 3" },
     ];
+
 </script>
 
 <section class="text-center item-center text-gray-700 body-font">
@@ -25,7 +26,7 @@
     </div>
     <div class="grid grid-cols-3 justify-center">
         {#each featuredCards as card}
-            <FeaturedCard {card} />
+            <FeaturedCard card="{card}" />
         {/each}
     </div>
     <button

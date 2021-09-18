@@ -29,6 +29,7 @@
             ),
             linear-gradient(90deg, hsl(18, 0%, 1%), hsl(18, 0%, 1%));
     }
+
 </style>
 
 <section class="hero text-white">
