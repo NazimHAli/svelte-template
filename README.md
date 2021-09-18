@@ -22,7 +22,7 @@ yarn test
 
 ### What if I want to use the minimal Svelte template instead?
 
-Execute the helper script from the repo root.
+Execute the helper script.
 
 ```
 node scripts/useDefaultSvelteTemplate.js
@@ -39,9 +39,9 @@ Google App Engine example configuration stored in `app.yaml` and deployed to the
 
 1. Use web dev best practices
 2. Improve TypeScript
-3. Keep [PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsource-285017.uc.r.appspot.com%2F) score > 90
+3. Keep [PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsource-285017.uc.r.appspot.com%2F&tab=desktop) score > 90
 
--   Current score is 100, but need to make it real by adding services, logging..etc and use that score
+-   Current score is ~90-100, but need to make it real by adding services, logging..etc and use that score
 
 ## Features
 
