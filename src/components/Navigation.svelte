@@ -52,7 +52,6 @@
             }
         }
     }
-
 </style>
 
 <script lang="ts">
@@ -65,7 +64,6 @@
         { name: "Contact", link: "/#/contact" },
         { name: "Meow", link: "/#/meow" },
     ];
-
 </script>
 
 <header
