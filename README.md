@@ -59,7 +59,7 @@ Google App Engine example configuration stored in `app.yaml` and deployed to the
 -   [ ] Add unit tests
 -   [x] Add integration tests
 -   [ ] Add visual regression tests
--   [ ] Add performance tests
+-   [x] Add performance tests
 -   [ ] Add accessibility tests
 -   [x] Add more pages
 -   [ ] Add real API services
