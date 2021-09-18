@@ -51,13 +51,14 @@
                 currentPage = "Home";
             });
     });
+
 </script>
 
 <p class="hidden">{name}</p>
 
 <GlobalStyles />
 
-<Navigation {currentPage} />
+<Navigation currentPage="{currentPage}" />
 
 <!-- Dynamically select component based on currentComponent value -->
 <svelte:component this="{currentComponent}" />

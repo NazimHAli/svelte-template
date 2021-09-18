@@ -1,6 +1,10 @@
+<script lang="ts">
+    export let currentYear = new Date().getFullYear();
+
+</script>
+
 <footer class="footer bg-white relative pt-1 border-b-2 border-blue-700">
     <div class="container mx-auto px-6">
-
         <div class="sm:flex sm:mt-8">
             <div
                 class="mt-8 sm:mt-0 sm:w-full sm:px-8 flex flex-col md:flex-row
@@ -108,7 +112,9 @@
         >
             <div class="sm:w-2/3 text-center py-6">
                 <p class="text-sm text-blue-700 font-bold mb-2">
-                    © 2020 - Just Meow
+                    ©
+                    {currentYear}
+                    - Just Meow
                 </p>
             </div>
         </div>

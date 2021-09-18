@@ -1,5 +1,6 @@
 <style lang="scss">
     @import "src/styles/variables.scss";
+
 </style>
 
 <script lang="ts">
@@ -8,6 +9,7 @@
     import Hero from "src/components/content/Hero.svelte";
     import ContentSection from "src/components/content/ContentSection.svelte";
     import Featured from "src/components/content/Featured.svelte";
+
 </script>
 
 <p class="hidden">{name}</p>

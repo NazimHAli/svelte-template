@@ -2,7 +2,6 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const sveltePreprocess = require("svelte-preprocess");
-const WebpackShellPlugin = require("webpack-shell-plugin");
 
 const nodeEnvironment = process.env.NODE_ENV || "development";
 const isProd = nodeEnvironment === "production";
@@ -23,7 +22,7 @@ module.exports = {
     },
     output: {
         path: distFolder,
-        filename: isProd ? "[name].[hash].js" : "[name].js",
+        filename: isProd ? "[name].[fullhash].js" : "[name].js",
         chunkFilename: isProd ? "[name].[chunkhash].js" : "[name].js",
         publicPath: "/",
     },
@@ -37,7 +36,11 @@ module.exports = {
                 use: {
                     loader: "svelte-loader",
                     options: {
-                        emitCss: true,
+                        compilerOptions: {
+                            // NOTE Svelte's dev mode MUST be enabled for HMR to work
+                            dev: !isProd, // Default: false
+                        },
+                        emitCss: isProd,
                         hotReload: !isProd,
                         preprocess: sveltePreprocess({
                             scss: true,
@@ -62,8 +65,7 @@ module.exports = {
                 exclude: /node_modules/,
                 include: /src/,
                 use: [
-                    "style-loader",
-                    MiniCssExtractPlugin.loader,
+                    isProd ? MiniCssExtractPlugin.loader : "style-loader",
                     "css-loader",
                     "postcss-loader",
                 ],
@@ -80,10 +82,6 @@ module.exports = {
         ],
     },
     plugins: [
-        new WebpackShellPlugin({
-            onBuildStart: ["node imageutils.js"],
-            dev: true,
-        }),
         new MiniCssExtractPlugin({
             filename: isProd ? "css/[contenthash].css" : "css/[name].css",
             chunkFilename: isProd
@@ -96,7 +94,14 @@ module.exports = {
             favicon: "src/favicon.png",
         }),
     ],
-    devtool: isProd ? "false" : "inline-source-map",
+    devtool: isProd ? "eval" : "eval-cheap-module-source-map",
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "dist"),
+        },
+        compress: true,
+        port: 9000,
+    },
     optimization: {
         splitChunks: {
             chunks: "all",

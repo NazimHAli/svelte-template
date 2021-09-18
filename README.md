@@ -46,22 +46,22 @@ Google App Engine example configuration stored in `app.yaml` and deployed to the
 ## Features
 
 -   Svelte with TypeScript
--   WebPack
+-   WebPack 5
 -   TailwindCSS
 -   PostCSS: Autoprefixer, PurgeCSS
 -   Code splitting
 -   Lazy loading
--   GitHub actions to run build and Cypress tests
+-   GitHub actions to run build, unit and Cypress tests
 
 ## TODO
 
 -   [x] Cleanup unused packages
 -   [ ] Add unit tests
--   [ ] Add integration tests
+-   [x] Add integration tests
 -   [ ] Add visual regression tests
 -   [ ] Add performance tests
 -   [ ] Add accessibility tests
--   [ ] Add more pages
+-   [x] Add more pages
 -   [ ] Add real API services
 -   [ ] Update documentation
 -   [ ] Create virtual scroller

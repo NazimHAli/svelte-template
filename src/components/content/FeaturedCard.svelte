@@ -1,5 +1,6 @@
 <script>
     export let card = {};
+
 </script>
 
 <div class="animated fadeIn">

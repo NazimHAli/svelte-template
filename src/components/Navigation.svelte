@@ -52,6 +52,7 @@
             }
         }
     }
+
 </style>
 
 <script lang="ts">
@@ -64,6 +65,7 @@
         { name: "Contact", link: "/#/contact" },
         { name: "Meow", link: "/#/meow" },
     ];
+
 </script>
 
 <header
@@ -75,7 +77,7 @@
             <img
                 src="./images/colorful-gradient-abstract-logo/3410492.jpg"
                 alt="Site icon"
-                width="30px"
+                width="80rem"
             />
         </a>
     </div>
