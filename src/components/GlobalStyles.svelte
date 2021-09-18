@@ -18,6 +18,4 @@
     @import "animate.css/source/fading_entrances/fadeInLeft.css";
     @import "animate.css/source/fading_entrances/fadeInRight.css";
 
-    /* Animate.css - all imports example */
-    // @import "animate.css/animate.css";
 </style>
