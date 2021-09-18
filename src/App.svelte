@@ -51,7 +51,6 @@
                 currentPage = "Home";
             });
     });
-
 </script>
 
 <p class="hidden">{name}</p>

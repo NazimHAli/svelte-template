@@ -10,7 +10,6 @@
             createObserver(element);
         });
     });
-
 </script>
 
 <section class="mt-10 text-gray-800 text-center">

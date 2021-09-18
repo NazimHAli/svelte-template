@@ -10,7 +10,7 @@ const distFolder = path.resolve(__dirname, "dist");
 module.exports = {
     mode: nodeEnvironment,
     entry: {
-        bundle: ["./src/main.ts"],
+        bundle: ["./src/main.js"],
     },
     resolve: {
         alias: {

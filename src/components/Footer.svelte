@@ -1,6 +1,5 @@
 <script lang="ts">
     export let currentYear = new Date().getFullYear();
-
 </script>
 
 <footer class="footer bg-white relative pt-1 border-b-2 border-blue-700">

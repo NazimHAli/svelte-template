@@ -3,7 +3,7 @@ class Router {
     mode: string = "hash";
     root: string = "/";
     current: string;
-    interval: number;
+    interval: NodeJS.Timer;
 
     constructor(options: { mode: string; root: string }) {
         this.mode = window.history.pushState ? "history" : "hash";

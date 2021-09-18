@@ -17,5 +17,4 @@
     @import "animate.css/source/fading_entrances/fadeInDown.css";
     @import "animate.css/source/fading_entrances/fadeInLeft.css";
     @import "animate.css/source/fading_entrances/fadeInRight.css";
-
 </style>
