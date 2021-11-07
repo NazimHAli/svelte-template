@@ -4,7 +4,7 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "build": "vite build",
+        "build": "vite build && node imageutils.js",
         "check": "svelte-check --tsconfig ./tsconfig.json",
         "cy:open": "cypress open",
         "cy:run": "cypress run --headless -s",
@@ -37,6 +37,7 @@
         "prettier": "^2.4.1",
         "prettier-plugin-svelte": "^2.4.0",
         "sass": "^1.43.4",
+        "sharp": "^0.29.2",
         "svelte": "^3.37.0",
         "svelte-check": "^2.1.0",
         "svelte-preprocess": "^4.7.2",

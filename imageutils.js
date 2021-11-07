@@ -11,9 +11,9 @@ import {
     rmdirSync,
 } from "fs";
 
-const publicFolderDist = resolve(__dirname, "dist");
-const publicFolderDistImages = resolve(__dirname, "dist/images");
-const srcImages = resolve(__dirname, "src/images/**/*.jpg");
+const publicFolderDist = resolve(".", "dist");
+const publicFolderDistImages = resolve(".", "dist/images");
+const srcImages = resolve(".", "src/images/**/*.jpg");
 
 /*
  * Create folder(s) if doesn't exist
@@ -60,7 +60,7 @@ const optimizeImages = (imagesGlob) => {
         }
 
         files.forEach((file) => {
-            const relativeFilePath = relative(__dirname, file).replace(
+            const relativeFilePath = relative(".", file).replace(
                 "src/",
                 ""
             );
@@ -70,7 +70,7 @@ const optimizeImages = (imagesGlob) => {
             createFoldersRecursively(newFileDir);
 
             sharp(file)
-                .resize(300, 200)
+                .resize(300, 200, {"fit": "outside"})
                 .toFormat("webp")
                 .toFile(newFile)
                 .catch((err) => {
@@ -80,9 +80,11 @@ const optimizeImages = (imagesGlob) => {
     });
 };
 
-// Clean up
-deleteAllFolders(publicFolderDist);
+// Clean up if needed
+// deleteAllFolders(publicFolderDist);
+
 // Create folders
 createFoldersRecursively(publicFolderDistImages);
+
 // Optimize images
 optimizeImages(srcImages);
