@@ -1,3 +1,5 @@
+import "./styles/global.scss";
+
 let app;
 
 // Dynamically import component

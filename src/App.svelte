@@ -5,14 +5,13 @@
     import Router from "./utils/router";
 
     /*
-     * Global components
+     * Global
      */
-    import GlobalStyles from "./components/GlobalStyles.svelte";
     import Navigation from "./components/Navigation.svelte";
     import Footer from "./components/Footer.svelte";
 
     /*
-     * Components to be routed
+     * Components routed
      */
     import About from "./components/routes/About.svelte";
     import Contact from "./components/routes/Contact.svelte";
@@ -53,13 +52,13 @@
     });
 </script>
 
-<p class="hidden">{name}</p>
+<main>
+    <p class="hidden">{name}</p>
 
-<GlobalStyles />
+    <Navigation currentPage="{currentPage}" />
 
-<Navigation currentPage="{currentPage}" />
+    <!-- Dynamically select component based on currentComponent value -->
+    <svelte:component this="{currentComponent}" />
 
-<!-- Dynamically select component based on currentComponent value -->
-<svelte:component this="{currentComponent}" />
-
-<Footer />
+    <Footer />
+</main>
