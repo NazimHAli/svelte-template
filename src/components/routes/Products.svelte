@@ -1,9 +1,3 @@
-<style lang="scss">
-    .container {
-        background-color: #fff;
-    }
-</style>
-
 <script>
     const productList = [
         { title: "Product 1", imageURL: "https://placeimg.com/250/150/nature" },
@@ -69,3 +63,9 @@
         </div>
     </div>
 </section>
+
+<style lang="scss">
+    .container {
+        background-color: #fff;
+    }
+</style>

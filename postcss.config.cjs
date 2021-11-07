@@ -10,7 +10,7 @@ module.exports = {
     plugins: [
         tailwindcss,
         autoprefixer({
-            grid: false, // Disable IE CSS Grid fallbacks
+            grid: false, // Disable IE support
         }),
         postcssImport,
         isProd &&
@@ -27,7 +27,7 @@ module.exports = {
         isProd &&
             purgecss({
                 keyframes: true,
-                content: ["./src/**/*.svelte", "./src/**/*.html"],
+                content: ["./src/**/*.svelte", "index.html"],
                 safelist: [/svelte-/, /tailwindcss\/\/base/],
                 defaultExtractor: (content) =>
                     content.match(/[A-Za-z0-9-_:/]+/g) || [],

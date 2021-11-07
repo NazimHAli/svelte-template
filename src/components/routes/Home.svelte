@@ -1,13 +1,9 @@
-<style lang="scss">
-    @import "src/styles/variables.scss";
-</style>
-
 <script lang="ts">
     export let name: string;
 
-    import Hero from "src/components/content/Hero.svelte";
-    import ContentSection from "src/components/content/ContentSection.svelte";
-    import Featured from "src/components/content/Featured.svelte";
+    import Hero from"@/components/content/Hero.svelte";
+    import ContentSection from"@/components/content/ContentSection.svelte";
+    import Featured from"@/components/content/Featured.svelte";
 </script>
 
 <p class="hidden">{name}</p>
@@ -27,3 +23,7 @@
 <section class="container mx-auto">
     <ContentSection />
 </section>
+
+<style lang="scss">
+    @import "src/styles/variables.scss";
+</style>

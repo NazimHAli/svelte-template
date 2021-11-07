@@ -1,16 +1,16 @@
 "use strict";
 
-const compression = require("compression");
-const express = require("express");
-const path = require("path");
+import compression from "compression";
+import express, { static } from "express";
+import { join } from "path";
 const app = express();
 
 app.use(compression());
-app.use(express.static(path.join(__dirname, "dist")));
+app.use(static(join(__dirname, "dist")));
 
 app.get("/", (req, res) => {
     res.sendFile("index.html", {
-        root: path.join(__dirname, "dist"),
+        root: join(__dirname, "dist"),
     });
 });
 
@@ -20,4 +20,4 @@ app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
 });
 
-module.exports = app;
+export default app;

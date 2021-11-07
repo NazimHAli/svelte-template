@@ -1,3 +1,26 @@
+<section class="hero text-white">
+    <div
+        class="container mx-auto flex flex-wrap flex-col md:flex-row
+        items-center"
+    >
+        <!--Left Col-->
+        <div
+            class="flex flex-col w-full md:w-3/5 justify-center items-start
+            text-center md:text-left animated fadeInLeft"
+        >
+            <p class="uppercase w-full">My awesome message right here ma!</p>
+            <h1 class="my-4 text-5xl font-bold leading-tight text-gray-100">
+                Second awesome message to everyone!!!
+            </h1>
+            <p class="leading-normal text-2xl mb-8">Third sub message!!!</p>
+        </div>
+        <!--Right Col-->
+        <div class="w-full md:w-2/5 text-center">
+            <p class="animated fadeInRight">Right side text</p>
+        </div>
+    </div>
+</section>
+
 <style>
     .hero {
         @apply shadow-inner;
@@ -28,26 +51,3 @@
             linear-gradient(90deg, hsl(18, 0%, 1%), hsl(18, 0%, 1%));
     }
 </style>
-
-<section class="hero text-white">
-    <div
-        class="container mx-auto flex flex-wrap flex-col md:flex-row
-        items-center"
-    >
-        <!--Left Col-->
-        <div
-            class="flex flex-col w-full md:w-3/5 justify-center items-start
-            text-center md:text-left animated fadeInLeft"
-        >
-            <p class="uppercase w-full">My awesome message right here ma!</p>
-            <h1 class="my-4 text-5xl font-bold leading-tight text-gray-100">
-                Second awesome message to everyone!!!
-            </h1>
-            <p class="leading-normal text-2xl mb-8">Third sub message!!!</p>
-        </div>
-        <!--Right Col-->
-        <div class="w-full md:w-2/5 text-center">
-            <p class="animated fadeInRight">Right side text</p>
-        </div>
-    </div>
-</section>

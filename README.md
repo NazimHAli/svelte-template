@@ -1,69 +1,48 @@
-# Svelte template
+# Svelte + TS + Vite
 
-Svelte starter template/boilerplate using a modern build process with WebPack, PostCSS, PurgeCSS, code splitting, lazy loading, simple, vanilla SPA router in TypeScript, unit testing, integration testing.
+This template should help get you started developing with Svelte and TypeScript in Vite.
 
-![Build](https://github.com/NazimHAli/svelte-template/workflows/Build/badge.svg)
-![Performance](https://github.com/NazimHAli/svelte-template/workflows/Performance/badge.svg)
-![Tests](https://github.com/NazimHAli/svelte-template/workflows/Tests/badge.svg)
+## Recommended IDE Setup
 
-[View Demo](https://svelte-template-prod.vercel.app/)
+[VSCode](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
-![Screenshot](screenshot.png)
+## Need an official Svelte framework?
 
-## Quick start
+Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
 
+## Technical considerations
+
+**Why use this over SvelteKit?**
+
+- It brings its own routing solution which might not be preferable for some users.
+- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
+  `vite dev` and `vite build` wouldn't work in a SvelteKit environment, for example.
+
+This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
+
+Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
+
+**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
+
+Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
+
+**Why include `.vscode/extensions.json`?**
+
+Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
+
+**Why enable `allowJs` in the TS template?**
+
+While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
+
+**Why is HMR not preserving my local component state?**
+
+HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
+
+If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
+
+```ts
+// store.ts
+// An extremely simple external store
+import { writable } from 'svelte/store'
+export default writable(0)
 ```
-yarn install
-yarn dev
-yarn test
-```
-
-### What if I want to use the minimal Svelte template instead?
-
-Execute the helper script.
-
-```
-node scripts/useDefaultSvelteTemplate.js
-```
-
-## Deploying
-
-Production build assets are stored in `dist`. Static assets can be deployed to any server that supports it. Easy to deploy to any static host provider.
-
-Google App Engine example configuration stored in `app.yaml` and demo deployed to vercel.
-
-## Goals
-
-1. Use web dev best practices
-2. Improve TypeScript
-3. Keep [PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsource-285017.uc.r.appspot.com%2F&tab=desktop) score > 90
-
--   Current score is ~90-100, but need to make it real by adding services, logging..etc and use that score
-
-## Features
-
--   Svelte with TypeScript
--   WebPack 5
--   TailwindCSS
--   PostCSS: Autoprefixer, PurgeCSS
--   Code splitting
--   Lazy loading
--   GitHub actions to run build, unit and Cypress tests
-
-## TODO
-
--   [x] Cleanup unused packages
--   [ ] Add unit tests
--   [x] Add integration tests
--   [ ] Add visual regression tests
--   [x] Add performance tests
--   [ ] Add accessibility tests
--   [x] Add more pages
--   [ ] Add real API services
--   [ ] Update documentation
--   [ ] Create virtual scroller
--   [ ] Migrate Javascript modules to TypeScript
-
-## Contributions welcome!
-
-Can start with the list of items in the TODO section.

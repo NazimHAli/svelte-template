@@ -1,19 +1,19 @@
-const sharp = require("sharp");
-const path = require("path");
-const glob = require("glob");
-const fs = require("fs");
+import sharp from "sharp";
+import { resolve, relative, join, dirname } from "path";
+import glob from "glob";
+import { access, mkdir, existsSync, lstatSync, readdirSync, unlinkSync, rmdirSync } from "fs";
 
-const publicFolderDist = path.resolve(__dirname, "dist");
-const publicFolderDistImages = path.resolve(__dirname, "dist/images");
-const srcImages = path.resolve(__dirname, "src/images/**/*.jpg");
+const publicFolderDist = resolve(__dirname, "dist");
+const publicFolderDistImages = resolve(__dirname, "dist/images");
+const srcImages = resolve(__dirname, "src/images/**/*.jpg");
 
 /*
  * Create folder(s) if doesn't exist
  */
 const createFoldersRecursively = (folderToCreate) => {
-    fs.access(folderToCreate, (error) => {
+    access(folderToCreate, (error) => {
         if (error) {
-            fs.mkdir(folderToCreate, { recursive: true }, (err) => {
+            mkdir(folderToCreate, { recursive: true }, (err) => {
                 if (err) {
                     console.log(`Error creating directory: ${folderToCreate}`);
                 }
@@ -26,18 +26,18 @@ const createFoldersRecursively = (folderToCreate) => {
  * Delete folders recursively
  */
 const deleteAllFolders = (path) => {
-    if (fs.existsSync(path) && fs.lstatSync(path).isDirectory()) {
-        fs.readdirSync(path).forEach((file, _) => {
+    if (existsSync(path) && lstatSync(path).isDirectory()) {
+        readdirSync(path).forEach((file, _) => {
             const currentPath = `${path}/${file}`;
 
-            if (fs.lstatSync(currentPath).isDirectory()) {
+            if (lstatSync(currentPath).isDirectory()) {
                 deleteAllFolders(currentPath);
             } else {
-                fs.unlinkSync(currentPath);
+                unlinkSync(currentPath);
             }
         });
 
-        fs.rmdirSync(path);
+        rmdirSync(path);
     }
 };
 
@@ -52,11 +52,10 @@ const optimizeImages = (imagesGlob) => {
         }
 
         files.forEach((file) => {
-            const relativeFilePath = path
-                .relative(__dirname, file)
+            const relativeFilePath = relative(__dirname, file)
                 .replace("src/", "");
-            const newFile = path.join(path.resolve("dist"), relativeFilePath);
-            const newFileDir = path.dirname(newFile);
+            const newFile = join(resolve("dist"), relativeFilePath);
+            const newFileDir = dirname(newFile);
 
             createFoldersRecursively(newFileDir);
 

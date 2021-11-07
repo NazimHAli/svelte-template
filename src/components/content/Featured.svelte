@@ -1,5 +1,5 @@
 <script>
-    import FeaturedCard from "src/components/content/FeaturedCard.svelte";
+    import FeaturedCard from "@/components/content/FeaturedCard.svelte";
 
     const featuredCards = [
         { title: "Title 1", description: "Description content 1" },
