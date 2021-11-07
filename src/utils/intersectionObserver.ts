@@ -1,3 +1,19 @@
+/**
+ * 
+ * @example 
+    import createObserver from "src/utils/intersectionObserver";
+    import { onMount } from "svelte";
+
+    onMount(() => {
+        const elementsToObserve = document.querySelectorAll("#infocard");
+
+        elementsToObserve.forEach((element) => {
+            createObserver(element);
+        });
+    });
+ *
+ */
+
 function createObserver(elementToObserve: Element) {
     let observer: IntersectionObserver;
 
@@ -23,17 +39,5 @@ function handleIntersect(entries: any[]) {
         }
     );
 }
-
-// Example usage
-// import createObserver from "src/utils/intersectionObserver";
-// import { onMount } from "svelte";
-
-// onMount(() => {
-//   const elementsToObserve = document.querySelectorAll("#infocard");
-
-//   elementsToObserve.forEach((element) => {
-//     createObserver(element);
-//   });
-// });
 
 export default createObserver;

@@ -10,9 +10,9 @@
         "lint": "prettier --check .",
         "lint:fix": "prettier --check -w .",
         "lint:watch": "onchange '**' --exclude-path .gitignore -- prettier --write {{changed}}",
-        "start": "cross-env NODE_ENV=production node app.js",
+        "serve": "cross-env NODE_ENV=production node app.js",
         "test": "cypress run",
-        "test:start": "yarn start & wait-on -t 3000 'http://localhost:8080/'"
+        "test:serve": "yarn serve & wait-on -t 3000 'http://localhost:8080/'"
     },
     "devDependencies": {
         "@babel/core": "^7.16.0",
