@@ -53,12 +53,12 @@
 </script>
 
 <main>
-  <p class="hidden">{name}</p>
+    <p class="hidden">{name}</p>
 
-  <Navigation currentPage="{currentPage}" />
+    <Navigation currentPage="{currentPage}" />
 
-  <!-- Dynamically select component based on currentComponent value -->
-  <svelte:component this="{currentComponent}" />
+    <!-- Dynamically select component based on currentComponent value -->
+    <svelte:component this="{currentComponent}" />
 
-  <Footer />
+    <Footer />
 </main>

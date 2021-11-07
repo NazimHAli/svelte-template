@@ -1,6 +1,6 @@
 <script>
-    import InfoCard from"@/components/content/InfoCard.svelte";
-    import createObserver from"@/utils/intersectionObserver";
+    import InfoCard from "@/components/content/InfoCard.svelte";
+    import createObserver from "@/utils/intersectionObserver";
     import { onMount } from "svelte";
 
     onMount(() => {

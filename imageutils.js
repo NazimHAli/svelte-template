@@ -1,7 +1,15 @@
 import sharp from "sharp";
 import { resolve, relative, join, dirname } from "path";
 import glob from "glob";
-import { access, mkdir, existsSync, lstatSync, readdirSync, unlinkSync, rmdirSync } from "fs";
+import {
+    access,
+    mkdir,
+    existsSync,
+    lstatSync,
+    readdirSync,
+    unlinkSync,
+    rmdirSync,
+} from "fs";
 
 const publicFolderDist = resolve(__dirname, "dist");
 const publicFolderDistImages = resolve(__dirname, "dist/images");
@@ -52,8 +60,10 @@ const optimizeImages = (imagesGlob) => {
         }
 
         files.forEach((file) => {
-            const relativeFilePath = relative(__dirname, file)
-                .replace("src/", "");
+            const relativeFilePath = relative(__dirname, file).replace(
+                "src/",
+                ""
+            );
             const newFile = join(resolve("dist"), relativeFilePath);
             const newFileDir = dirname(newFile);
 
