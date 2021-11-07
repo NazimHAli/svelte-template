@@ -63,7 +63,11 @@ const optimizeImages = (imagesGlob) => {
             const relativeFilePath = relative(".", file).replace("src/", "");
             const newFile = join(resolve("dist"), relativeFilePath);
             const newFileDir = dirname(newFile);
-            const resizeOptions = { width: 80, height: 96, options: { fit: "outside" } };
+            const resizeOptions = {
+                width: 80,
+                height: 96,
+                options: { fit: "outside" },
+            };
 
             createFoldersRecursively(newFileDir);
 
