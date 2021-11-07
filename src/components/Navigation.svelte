@@ -74,8 +74,7 @@
 </script>
 
 <header
-    class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2
-    animated fadeIn shadow-md"
+    class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 shadow-md"
 >
     <div class="flex-1 flex justify-between items-center">
         <a href="{navItems[0].link}">
