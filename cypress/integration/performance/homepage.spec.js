@@ -70,9 +70,9 @@ describe(
                 });
         });
 
-        it("ensure that no image failed to load", () => {
+        it("ensure that no image failed to load", async () => {
             cy.visit("/");
-            cy.get("img").each((img) =>
+            await cy.get("img").each((img) =>
                 expect(img[0].naturalWidth).to.not.equal(0)
             );
             cy.get(".my-4");
