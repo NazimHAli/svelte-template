@@ -52,6 +52,13 @@
             }
         }
     }
+
+    .logo-centered {
+        object-fit: cover;
+        object-position: top;
+        height: 4.5rem;
+        width: 5rem;
+    }
 </style>
 
 <script lang="ts">
@@ -75,7 +82,9 @@
             <img
                 src="./images/colorful-gradient-abstract-logo/3410492.jpg"
                 alt="Site icon"
-                width="80rem"
+                width="80px"
+                height="96px"
+                class="logo-centered"
             />
         </a>
     </div>

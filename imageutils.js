@@ -70,7 +70,7 @@ const optimizeImages = (imagesGlob) => {
             createFoldersRecursively(newFileDir);
 
             sharp(file)
-                .resize(300, 200, {"fit": "outside"})
+                .resize({width: 80, height: 96, options: {"fit": "outside"}})
                 .toFormat("webp")
                 .toFile(newFile)
                 .catch((err) => {
