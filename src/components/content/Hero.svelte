@@ -3,8 +3,6 @@
         @apply shadow-inner;
         @apply py-10;
         @apply bg-gray-900;
-        /* background: #7f7fd5;
-    background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5); */
 
         background-image: radial-gradient(
                 circle at 16% 83%,
