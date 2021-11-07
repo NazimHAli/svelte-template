@@ -20,6 +20,7 @@
     "animate.css": "^4.1.1",
     "autoprefixer": "^10.4.0",
     "cssnano": "^5.0.10",
+    "cypress": "^8.7.0",
     "postcss": "^8.3.11",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
