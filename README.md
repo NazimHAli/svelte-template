@@ -27,8 +27,8 @@ node scripts/useDefaultSvelteTemplate.js
 
 ## Deploying
 
-Production build assets are stored in `public/dist`  
-Static assets can be deployed to any server that supports it. Should be just as easy to deploy to other static host providers like AWS, Netlify, or Firebase.
+Production build assets are stored in `dist`  
+Static assets can be deployed to any server that supports it. Easy to deploy to static host providers like AWS, Netlify, or Firebase.
 
 Google App Engine example configuration stored in `app.yaml` and deployed to the demo URL.
 
