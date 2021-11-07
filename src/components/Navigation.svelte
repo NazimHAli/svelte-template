@@ -14,26 +14,24 @@
     ];
 </script>
 
-<header
-    class="lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 shadow-md"
->
-    <div class="flex-1 flex justify-between items-center">
+<header class="header">
+    <div class="header_logo__link">
         <a href="{navItems[0].link}">
             <img
                 src="./images/colorful-gradient-abstract-logo/3410492.jpg"
                 alt="Site icon"
                 width="80px"
                 height="96px"
-                class="logo-centered"
+                class="header_logo__img"
             />
         </a>
     </div>
 
-    <label for="menu-toggle" class="pointer-cursor lg:hidden block">
+    <label for="menu-toggle" class="menu-toggle">
         <button>Menu</button>
     </label>
 
-    <div class="md:hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+    <div class="menu-container" id="menu">
         <nav>
             <ul class="nav-list">
                 {#each navItems as item}

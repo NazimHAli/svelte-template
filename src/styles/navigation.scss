@@ -1,3 +1,28 @@
+.header {
+    @apply lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 shadow-md;
+
+    &_logo {
+        &__link {
+            @apply flex-1 flex justify-between items-center;
+        }
+
+        &__img {
+            object-fit: cover;
+            object-position: top;
+            height: 4.5rem;
+            width: 5rem;
+        }
+    }
+}
+
+.menu-container {
+    @apply md:hidden lg:flex lg:items-center lg:w-auto w-full;
+}
+
+.menu-toggle {
+    @apply cursor-pointer lg:hidden block;
+}
+
 .nav-list {
     @apply items-center;
     @apply justify-between;
@@ -66,11 +91,4 @@
             }
         }
     }
-}
-
-.logo-centered {
-    object-fit: cover;
-    object-position: top;
-    height: 4.5rem;
-    width: 5rem;
 }
