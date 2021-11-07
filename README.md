@@ -2,9 +2,6 @@
 
 Svelte starter template/boilerplate using a modern build process with WebPack, PostCSS, PurgeCSS, code splitting, lazy loading, simple, vanilla SPA router in TypeScript, unit testing, integration testing.
 
-[![Dependecy Status](https://david-dm.org/NazimHAli/svelte-template.svg)](https://david-dm.org/NazimHAli/svelte-template)  
-[![devDependencies Status](https://david-dm.org/NazimHAli/svelte-template/dev-status.svg)](https://david-dm.org/NazimHAli/svelte-template?type=dev)
-
 ![Build](https://github.com/NazimHAli/svelte-template/workflows/Build/badge.svg)
 ![Performance](https://github.com/NazimHAli/svelte-template/workflows/Performance/badge.svg)
 ![Tests](https://github.com/NazimHAli/svelte-template/workflows/Tests/badge.svg)
