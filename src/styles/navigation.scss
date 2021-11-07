@@ -2,15 +2,13 @@
     @apply lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 shadow-md;
 
     &_logo {
-        &__link {
+        &__container {
             @apply flex-1 flex justify-between items-center;
         }
 
         &__img {
-            object-fit: cover;
-            object-position: top;
             height: 4.5rem;
-            width: 5rem;
+            @apply object-cover object-top h-16 w-16;
         }
     }
 }
@@ -24,70 +22,53 @@
 }
 
 .nav-list {
-    @apply items-center;
-    @apply justify-between;
-    @apply lg:flex;
-    @apply lg:pt-0;
-    @apply pt-4;
-    @apply text-base;
-    @apply text-gray-800;
+    @apply lg:flex items-center justify-between text-base text-gray-800 pt-4 lg:pt-0;
+}
 
-    li {
-        a {
-            @apply block;
-            @apply duration-500;
-            @apply lg:p-4 py-3 px-0;
-            @apply my-1;
-            @apply px-10;
-            @apply relative;
-            @apply text-black;
+li {
+    a {
+        @apply block;
+        @apply relative;
+        @apply my-1;
+        @apply px-10;
+        @apply text-black;
+        @apply duration-500;
 
-            &.active {
-                background-color: #1793d1;
-                @apply text-white;
-            }
-
+        &:before {
+            content: "";
+            @apply absolute;
+            @apply top-0;
+            @apply left-0;
+            @apply w-full;
+            @apply h-full;
+            @apply border-black;
+            @apply border-t-2;
+            transform: scaleY(1);
+            @apply opacity-0;
+            @apply duration-300;
+        }
+        &:after {
+            content: "";
+            @apply absolute;
+            @apply top-0;
+            @apply left-0;
+            @apply w-full;
+            @apply h-full;
+            @apply bg-pink-600;
+            transform: scale(0);
+            @apply opacity-0;
+            @apply duration-300;
+            z-index: -1;
+        }
+        &:hover {
+            @apply text-white;
             &:before {
-                content: "";
-                @apply absolute;
-                @apply top-0;
-                @apply left-0;
-                @apply w-full;
-                @apply h-full;
-                @apply border-black;
-                @apply border-t-2;
                 transform: scaleY(1);
-                @apply opacity-0;
-                @apply duration-300;
+                @apply opacity-100;
             }
-
             &:after {
-                content: "";
-                @apply absolute;
-                @apply top-0;
-                @apply left-0;
-                @apply w-full;
-                @apply h-full;
-                @apply bg-pink-600;
-                transform: scale(0);
-                @apply opacity-0;
-                @apply duration-300;
-                z-index: -1;
-            }
-
-            &:hover {
-                @apply text-white;
-                @apply bg-pink-600;
-
-                &:before {
-                    transform: scaleY(1);
-                    @apply opacity-100;
-                }
-
-                &:after {
-                    transform: scaleY(1);
-                    @apply opacity-100;
-                }
+                transform: scaleY(1);
+                @apply opacity-100;
             }
         }
     }

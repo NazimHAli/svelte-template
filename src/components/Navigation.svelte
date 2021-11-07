@@ -1,5 +1,10 @@
 <style lang="scss">
-    @import "src/styles/navigation";
+    @import "src/styles/navigation.scss";
+
+    a.active {
+        background-color: #1793d1;
+        @apply text-white;
+    }
 </style>
 
 <script lang="ts">
@@ -14,8 +19,8 @@
     ];
 </script>
 
-<header class="header">
-    <div class="header_logo__link">
+<header class="animated fadeIn header">
+    <div class="header_logo__container">
         <a href="{navItems[0].link}">
             <img
                 src="./images/colorful-gradient-abstract-logo/3410492.jpg"
@@ -38,6 +43,7 @@
                     <li>
                         <a
                             class:active="{currentPage === item.name}"
+                            class="lg:p-4 py-3 px-0"
                             data-test="menu-{item.name.toLowerCase()}"
                             href="{item.link}"
                             on:click="{() => (currentPage = item.name)}"

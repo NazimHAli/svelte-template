@@ -5,6 +5,7 @@
     "type": "module",
     "scripts": {
         "build": "vite build && yarn resizeimg",
+        "build:watch": "vite build --watch",
         "check": "svelte-check --tsconfig ./tsconfig.json",
         "cy:open": "cypress open",
         "cy:run": "cypress run --headless -s",
