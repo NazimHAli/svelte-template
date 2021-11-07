@@ -6,7 +6,8 @@ Svelte starter template/boilerplate using a modern build process with WebPack, P
 ![Performance](https://github.com/NazimHAli/svelte-template/workflows/Performance/badge.svg)
 ![Tests](https://github.com/NazimHAli/svelte-template/workflows/Tests/badge.svg)
 
-[View Demo](https://source-285017.uc.r.appspot.com/)
+[View Demo](https://svelte-template-prod.vercel.app/)
+
 ![Screenshot](screenshot.png)
 
 ## Quick start
@@ -27,10 +28,9 @@ node scripts/useDefaultSvelteTemplate.js
 
 ## Deploying
 
-Production build assets are stored in `dist`  
-Static assets can be deployed to any server that supports it. Easy to deploy to static host providers like AWS, Netlify, or Firebase.
+Production build assets are stored in `dist`. Static assets can be deployed to any server that supports it. Easy to deploy to any static host provider.
 
-Google App Engine example configuration stored in `app.yaml` and deployed to the demo URL.
+Google App Engine example configuration stored in `app.yaml` and demo deployed to vercel.
 
 ## Goals
 
