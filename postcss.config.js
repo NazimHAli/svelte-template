@@ -28,7 +28,7 @@ module.exports = {
             purgecss({
                 keyframes: true,
                 content: ["./src/**/*.svelte", "./src/**/*.html"],
-                whitelistPatterns: [/svelte-/, /tailwindcss\/\/base/],
+                safelist: [/svelte-/, /tailwindcss\/\/base/],
                 defaultExtractor: (content) =>
                     content.match(/[A-Za-z0-9-_:/]+/g) || [],
             }),
