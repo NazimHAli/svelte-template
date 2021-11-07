@@ -72,9 +72,9 @@ describe(
 
         it("ensure that no image failed to load", async () => {
             cy.visit("/");
-            await cy.get("img").each((img) =>
-                expect(img[0].naturalWidth).to.not.equal(0)
-            );
+            await cy
+                .get("img")
+                .each((img) => expect(img[0].naturalWidth).to.not.equal(0));
             cy.get(".my-4");
         });
     }
