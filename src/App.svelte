@@ -1,22 +1,33 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+    import { onMount, afterUpdate } from "svelte";
     import Router from "./utils/router";
 
     /*
      * Global components
      */
     import Navigation from "./components/Navigation.svelte";
-    import Footer from "./components/Footer.svelte";
-    import type { SvelteComponent } from "svelte/internal";
+    import { beforeUpdate, SvelteComponent, tick } from "svelte/internal";
+    import createObserver from "./utils/intersectionObserver";
 
     let currentComponent: SvelteComponent;
     let currentPage: string;
+    let renderFooter: boolean = false;
+    let Footer;
 
     function setCurrentPage(name) {
         import(`./components/routes/${name}.svelte`).then((module) => {
             currentComponent = module.default;
             currentPage = name;
         });
+    }
+
+    function handleLoadFooter(entries: any[]) {
+        if (entries[0].isIntersecting) {
+            import("./components/Footer.svelte").then((module) => {
+                // @ts-ignore
+                Footer = module.default;
+            });
+        }
     }
 
     onMount(() => {
@@ -42,13 +53,28 @@
                 setCurrentPage("Home");
             });
     });
+
+    afterUpdate(async () => {
+        if (!renderFooter) {
+            renderFooter = true;
+            await tick();
+            setTimeout(() => {
+                createObserver(
+                    document.getElementById("observerElement"),
+                    handleLoadFooter
+                );
+            }, 200);
+        }
+    });
 </script>
 
-<main>
-    <Navigation currentPage="{currentPage}" />
+<Navigation currentPage="{currentPage}" />
 
-    <!-- Dynamically select component based on currentComponent value -->
-    <svelte:component this="{currentComponent}" />
+<!-- Dynamically select component based on currentComponent value -->
+<svelte:component this="{currentComponent}" />
 
+{#if renderFooter && Footer !== undefined}
     <Footer />
-</main>
+{:else}
+    <span id="observerElement"></span>
+{/if}
