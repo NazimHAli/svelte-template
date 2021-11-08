@@ -15,6 +15,10 @@ Svelte starter template/boilerplate using a modern build process - Vite as the d
 -   PostCSS: Autoprefixer, PurgeCSS
 -   Code splitting
 -   Lazy loading
+-   High [PageSpeed scores](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsvelte-template-prod.vercel.app%2F)
+    -   Both high since it's a simple demo:
+        -   Mobile: 94-100
+        -   Desktop: 100
 -   GitHub actions to run build, unit and Cypress tests
 
 ## Quick start
@@ -41,14 +45,6 @@ node scripts/useDefaultSvelteTemplate.js
 Production build assets are stored in `dist`. Static assets can be deployed to any server that supports it. Easy to deploy to any static host provider.
 
 Google App Engine example configuration stored in `app.yaml` and demo deployed to vercel.
-
-## Goals
-
-1. Use web dev best practices
-2. Improve TypeScript
-3. Keep [PageSpeed](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fsource-285017.uc.r.appspot.com%2F&tab=desktop) score > 90
-
--   Current score is ~90-100, but need to make it real by adding services, logging..etc and use that score
 
 ## TODO
 
