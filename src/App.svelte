@@ -63,7 +63,7 @@
                     document.getElementById("observerElement"),
                     handleLoadFooter
                 );
-            }, 200);
+            }, 500);
         }
     });
 </script>
