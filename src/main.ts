@@ -9,9 +9,6 @@ import("./App.svelte").then((module) => {
 
     app = new svelteComponent({
         target: document.body,
-        props: {
-            name: "svelte-app",
-        },
     });
 });
 

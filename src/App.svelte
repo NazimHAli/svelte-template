@@ -1,6 +1,4 @@
 <script lang="ts">
-    export let name: string;
-
     import { onMount } from "svelte";
     import Router from "./utils/router";
 
@@ -47,8 +45,6 @@
 </script>
 
 <main>
-    <p class="hidden">{name}</p>
-
     <Navigation currentPage="{currentPage}" />
 
     <!-- Dynamically select component based on currentComponent value -->
