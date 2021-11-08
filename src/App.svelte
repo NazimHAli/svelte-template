@@ -1,26 +1,34 @@
 <script lang="ts">
-    export let name: string;
-
-    import { onMount } from "svelte";
+    import { onMount, afterUpdate } from "svelte";
     import Router from "./utils/router";
 
     /*
-     * Global
+     * Global components
      */
     import Navigation from "./components/Navigation.svelte";
-    import Footer from "./components/Footer.svelte";
+    import { beforeUpdate, SvelteComponent, tick } from "svelte/internal";
+    import createObserver from "./utils/intersectionObserver";
 
-    /*
-     * Components routed
-     */
-    import About from "./components/routes/About.svelte";
-    import Contact from "./components/routes/Contact.svelte";
-    import Home from "./components/routes/Home.svelte";
-    import Meow from "./components/routes/Meow.svelte";
-    import Products from "./components/routes/Products.svelte";
-
-    let currentComponent: typeof About;
+    let currentComponent: SvelteComponent;
     let currentPage: string;
+    let renderFooter: boolean = false;
+    let Footer;
+
+    function setCurrentPage(name) {
+        import(`./components/routes/${name}.svelte`).then((module) => {
+            currentComponent = module.default;
+            currentPage = name;
+        });
+    }
+
+    function handleLoadFooter(entries: any[]) {
+        if (entries[0].isIntersecting) {
+            import("./components/Footer.svelte").then((module) => {
+                // @ts-ignore
+                Footer = module.default;
+            });
+        }
+    }
 
     onMount(() => {
         const router = new Router({
@@ -30,35 +38,43 @@
 
         router
             .addRoute(/about/, () => {
-                currentComponent = About;
-                currentPage = "About";
+                setCurrentPage("About");
             })
             .addRoute(/contact/, () => {
-                currentComponent = Contact;
-                currentPage = "Contact";
+                setCurrentPage("Contact");
             })
             .addRoute(/meow/, () => {
-                currentComponent = Meow;
-                currentPage = "Meow";
+                setCurrentPage("Meow");
             })
             .addRoute(/products/, () => {
-                currentComponent = Products;
-                currentPage = "Products";
+                setCurrentPage("Products");
             })
             .addRoute("", () => {
-                currentComponent = Home;
-                currentPage = "Home";
+                setCurrentPage("Home");
             });
+    });
+
+    afterUpdate(async () => {
+        if (!renderFooter) {
+            renderFooter = true;
+            await tick();
+            setTimeout(() => {
+                createObserver(
+                    document.getElementById("observerElement"),
+                    handleLoadFooter
+                );
+            }, 500);
+        }
     });
 </script>
 
-<main>
-    <p class="hidden">{name}</p>
+<Navigation currentPage="{currentPage}" />
 
-    <Navigation currentPage="{currentPage}" />
+<!-- Dynamically select component based on currentComponent value -->
+<svelte:component this="{currentComponent}" />
 
-    <!-- Dynamically select component based on currentComponent value -->
-    <svelte:component this="{currentComponent}" />
-
+{#if renderFooter && Footer !== undefined}
     <Footer />
-</main>
+{:else}
+    <span id="observerElement"></span>
+{/if}

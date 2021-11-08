@@ -63,11 +63,16 @@ const optimizeImages = (imagesGlob) => {
             const relativeFilePath = relative(".", file).replace("src/", "");
             const newFile = join(resolve("dist"), relativeFilePath);
             const newFileDir = dirname(newFile);
+            const resizeOptions = {
+                width: 80,
+                height: 96,
+                options: { fit: "outside" },
+            };
 
             createFoldersRecursively(newFileDir);
 
             sharp(file)
-                .resize({ width: 80, height: 96, options: { fit: "outside" } })
+                .resize(resizeOptions)
                 .toFormat("webp")
                 .toFile(newFile)
                 .catch((err) => {

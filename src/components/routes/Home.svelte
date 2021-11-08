@@ -3,16 +3,12 @@
 </style>
 
 <script lang="ts">
-    export let name: string;
-
     import Hero from "@/components/content/Hero.svelte";
     import ContentSection from "@/components/content/ContentSection.svelte";
     import Featured from "@/components/content/Featured.svelte";
 </script>
 
 <main>
-    <p class="hidden">{name}</p>
-
     <Hero />
 
     <section class="container mx-auto">

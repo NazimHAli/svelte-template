@@ -3,7 +3,7 @@
 describe(
     "Check some performance metrics",
     {
-        baseUrl: "https://source-285017.uc.r.appspot.com/",
+        baseUrl: "https://svelte-template-prod.vercel.app/",
     },
     () => {
         it("check page load time", () => {
@@ -70,12 +70,13 @@ describe(
                 });
         });
 
-        it("ensure that no image failed to load", async () => {
+        it("ensure that no image failed to load", () => {
             cy.visit("/");
-            await cy
-                .get("img")
-                .each((img) => expect(img[0].naturalWidth).to.not.equal(0));
             cy.get(".my-4");
+
+            cy.get("img").each((img) =>
+                expect(img[0].naturalWidth).to.not.equal(0)
+            );
         });
     }
 );

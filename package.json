@@ -5,13 +5,14 @@
     "type": "module",
     "scripts": {
         "build": "vite build && yarn resizeimg",
+        "build:watch": "vite build --watch",
         "check": "svelte-check --tsconfig ./tsconfig.json",
         "cy:open": "cypress open",
         "cy:run": "cypress run --headless -s",
         "dev": "vite --host 10.0.0.211 --port 3001",
         "lint": "prettier --check .",
         "lint:fix": "prettier --check -w .",
-        "resizeimg": "node imageutils.js",
+        "resizeimg": "node scripts/imageutils.js",
         "serve": "vite preview --port 8080",
         "test": "cypress run",
         "test:serve": "yarn serve & wait-on -t 3000 'http://localhost:8080/'"

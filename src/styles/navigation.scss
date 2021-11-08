@@ -1,0 +1,75 @@
+.header {
+    @apply lg:px-16 px-6 bg-white flex flex-wrap items-center lg:py-0 py-2 shadow-md;
+
+    &_logo {
+        &__container {
+            @apply flex-1 flex justify-between items-center;
+        }
+
+        &__img {
+            height: 4.5rem;
+            @apply object-cover object-top h-16 w-16;
+        }
+    }
+}
+
+.menu-container {
+    @apply md:hidden lg:flex lg:items-center lg:w-auto w-full;
+}
+
+.menu-toggle {
+    @apply cursor-pointer lg:hidden block;
+}
+
+.nav-list {
+    @apply lg:flex items-center justify-between text-base text-gray-800 pt-4 lg:pt-0;
+}
+
+li {
+    a {
+        @apply block;
+        @apply relative;
+        @apply my-1;
+        @apply px-10;
+        @apply text-black;
+        @apply duration-500;
+
+        &:before {
+            content: "";
+            @apply absolute;
+            @apply top-0;
+            @apply left-0;
+            @apply w-full;
+            @apply h-full;
+            @apply border-black;
+            @apply border-t-2;
+            transform: scaleY(1);
+            @apply opacity-0;
+            @apply duration-300;
+        }
+        &:after {
+            content: "";
+            @apply absolute;
+            @apply top-0;
+            @apply left-0;
+            @apply w-full;
+            @apply h-full;
+            @apply bg-pink-600;
+            transform: scale(0);
+            @apply opacity-0;
+            @apply duration-300;
+            z-index: -1;
+        }
+        &:hover {
+            @apply text-white;
+            &:before {
+                transform: scaleY(1);
+                @apply opacity-100;
+            }
+            &:after {
+                transform: scaleY(1);
+                @apply opacity-100;
+            }
+        }
+    }
+}

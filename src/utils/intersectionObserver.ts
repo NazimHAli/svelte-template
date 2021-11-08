@@ -14,7 +14,10 @@
  *
  */
 
-function createObserver(elementToObserve: Element) {
+function createObserver(
+    elementToObserve: Element,
+    handleIntersect = handleCardIntersect
+) {
     let observer: IntersectionObserver;
 
     let options = {
@@ -27,7 +30,7 @@ function createObserver(elementToObserve: Element) {
     observer.observe(elementToObserve);
 }
 
-function handleIntersect(entries: any[]) {
+function handleCardIntersect(entries: any[]) {
     entries.forEach(
         (entry: {
             isIntersecting: boolean;

@@ -8,11 +8,11 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
     plugins: [
+        postcssImport,
         tailwindcss,
         autoprefixer({
             grid: false, // Disable IE support
         }),
-        postcssImport,
         isProd &&
             cssnano({
                 preset: [
@@ -27,7 +27,7 @@ module.exports = {
         isProd &&
             purgecss({
                 keyframes: true,
-                content: ["./src/**/*.svelte", "index.html"],
+                content: ["./src/**/*.svelte", "./*.html"],
                 safelist: [/svelte-/, /tailwindcss\/\/base/],
                 defaultExtractor: (content) =>
                     content.match(/[A-Za-z0-9-_:/]+/g) || [],
