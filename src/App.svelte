@@ -5,22 +5,21 @@
     import Router from "./utils/router";
 
     /*
-     * Global
+     * Global components
      */
     import Navigation from "./components/Navigation.svelte";
     import Footer from "./components/Footer.svelte";
+    import type { SvelteComponent } from "svelte/internal";
 
-    /*
-     * Components routed
-     */
-    import About from "./components/routes/About.svelte";
-    import Contact from "./components/routes/Contact.svelte";
-    import Home from "./components/routes/Home.svelte";
-    import Meow from "./components/routes/Meow.svelte";
-    import Products from "./components/routes/Products.svelte";
-
-    let currentComponent: typeof About;
+    let currentComponent: SvelteComponent;
     let currentPage: string;
+
+    function setCurrentPage(name) {
+        import(`./components/routes/${name}.svelte`).then((module) => {
+            currentComponent = module.default;
+            currentPage = name;
+        });
+    }
 
     onMount(() => {
         const router = new Router({
@@ -30,24 +29,19 @@
 
         router
             .addRoute(/about/, () => {
-                currentComponent = About;
-                currentPage = "About";
+                setCurrentPage("About");
             })
             .addRoute(/contact/, () => {
-                currentComponent = Contact;
-                currentPage = "Contact";
+                setCurrentPage("Contact");
             })
             .addRoute(/meow/, () => {
-                currentComponent = Meow;
-                currentPage = "Meow";
+                setCurrentPage("Meow");
             })
             .addRoute(/products/, () => {
-                currentComponent = Products;
-                currentPage = "Products";
+                setCurrentPage("Products");
             })
             .addRoute("", () => {
-                currentComponent = Home;
-                currentPage = "Home";
+                setCurrentPage("Home");
             });
     });
 </script>
