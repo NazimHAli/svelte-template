@@ -49,5 +49,8 @@
         "typescript": "^4.4.4",
         "vite": "^2.6.13",
         "wait-on": "^6.0.0"
+    },
+    "dependencies": {
+        "simple-spa-router-ts": "^1.0.1"
     }
 }

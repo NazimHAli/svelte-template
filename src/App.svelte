@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount, afterUpdate } from "svelte";
-    import Router from "./utils/router";
+    import Router from "simple-spa-router-ts";
 
     /*
      * Global components
