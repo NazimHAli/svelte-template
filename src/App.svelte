@@ -6,13 +6,13 @@
      * Global components
      */
     import Navigation from "./components/Navigation.svelte";
-    import { beforeUpdate, SvelteComponent, tick } from "svelte/internal";
+    import { SvelteComponent, tick } from "svelte/internal";
     import createObserver from "./utils/intersectionObserver";
 
     let currentComponent: SvelteComponent;
     let currentPage: string;
     let renderFooter: boolean = false;
-    let Footer;
+    let Footer: SvelteComponent;
 
     function setCurrentPage(name) {
         import(`./components/routes/${name}.svelte`).then((module) => {
