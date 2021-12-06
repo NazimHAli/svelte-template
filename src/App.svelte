@@ -73,8 +73,5 @@
 <!-- Dynamically select component based on currentComponent value -->
 <svelte:component this="{currentComponent}" />
 
-{#if renderFooter && Footer !== undefined}
-    <Footer />
-{:else}
-    <span id="observerElement"></span>
-{/if}
+<svelte:component this="{Footer}" />
+<span id="observerElement"></span>
