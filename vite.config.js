@@ -9,4 +9,7 @@ export default defineConfig({
             "@": resolve(".", "src"),
         },
     },
+    server: {
+        https: true
+    }
 });
