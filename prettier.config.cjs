@@ -3,5 +3,4 @@ module.exports = {
     tabWidth: 4,
     svelteSortOrder: "options-styles-scripts-markup",
     svelteStrictMode: true,
-    svelteBracketNewLine: true,
 };
