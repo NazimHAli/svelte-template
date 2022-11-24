@@ -9,5 +9,5 @@ export default defineConfig({
             "@": resolve(".", "src"),
         },
     },
-    assetsInclude: ["src/images/**/*.jpg"],
+    assetsInclude: ["**/*.jpg"],
 });
