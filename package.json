@@ -38,7 +38,7 @@
         "prettier": "^2.5.1",
         "prettier-plugin-svelte": "^2.5.0",
         "sass": "^1.44.0",
-        "sharp": "^0.29.3",
+        "sharp": "^0.30.5",
         "svelte": "^3.44.2",
         "svelte-check": "^2.2.10",
         "svelte-preprocess": "^4.7.2",
