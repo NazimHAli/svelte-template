@@ -4,7 +4,6 @@
         "baseUrl": ".",
         "isolatedModules": true,
         "module": "esnext",
-        "resolveJsonModule": true,
         "target": "esnext",
         "useDefineForClassFields": true,
         /**
