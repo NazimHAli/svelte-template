@@ -9,7 +9,7 @@
         "check": "svelte-check --tsconfig ./tsconfig.json",
         "cy:open": "cypress open",
         "cy:run": "cypress run --headless -s",
-        "dev": "vite --host 10.0.0.211 --port 3001",
+        "dev": "vite",
         "lint": "prettier --check .",
         "lint:fix": "prettier --check -w .",
         "serve": "vite preview --port 8080",
@@ -28,6 +28,7 @@
         "@types/tailwindcss": "^2.2.4",
         "animate.css": "^4.1.1",
         "autoprefixer": "^10.4.0",
+        "browserslist": "^4.23.3",
         "cssnano": "^5.0.12",
         "cypress": "^9.1.1",
         "express-rate-limit": "^5.5.1",
@@ -51,5 +52,6 @@
     },
     "dependencies": {
         "simple-spa-router-ts": "^1.0.1"
-    }
+    },
+    "packageManager": "yarn@4.4.1"
 }
