@@ -10,7 +10,7 @@ describe(
     "Test menu navigation hash change and CSS class active",
     testConfig,
     () => {
-        before(() => {
+        beforeEach(() => {
             cy.visit("/");
         });
 
